@@ -2,7 +2,7 @@
 תקציר\חזון הפרויקט – משפט ״מחץ״ או מספר משפטים על הסיבה שלמעשה הפרויקט מפותח (משפט מעלית - ראו למשל שקף 4 במקור 3)
 
 
-![project logo](https://raw.githubusercontent.com/malkals/our-project/master/YEDIDIM.png)
+![project logo](https://github.com/malkals/our-project/blob/master/Yedidim.pdf)
 
 
 ## Please visit our [live application](https://github.com/riki-r/my-project/blob/master/src/index.html)

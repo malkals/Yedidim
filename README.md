@@ -10,6 +10,7 @@
 
 ### [Link to our project](https://github.com/riki-r/my-project/blob/master/src/index.html)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yedidim_group/Lobby)
+ [![GitHub issues](https://img.shields.io/github/issues/jce-il/project-template.svg?style=flat)](https://github.com/jce-il/project-template/issues)
 
 
 ### [User Manual](https://github.com/malkals/our-project/wiki/User-Manual)

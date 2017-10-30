@@ -8,7 +8,7 @@
 
 
 
-link of project
+### [Link to our project](https://github.com/riki-r/my-project/blob/master/src/index.html)
 
 
 ### [User Manual](https://github.com/malkals/our-project/wiki/User-Manual)

@@ -5,12 +5,17 @@
 ![project logo](https://raw.githubusercontent.com/malkals/our-project/master/YEDIDIM.png)
 
 
+## Please visit our [live application](https://github.com/riki-r/my-project/blob/master/src/index.html)
+- Alright, currently only a landing page...
 
 
-
-### [Link to our project](https://github.com/riki-r/my-project/blob/master/src/index.html)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yedidim_group/Lobby)
  [![GitHub issues](https://img.shields.io/github/issues/jce-il/our-project.svg?style=flat)](https://github.com/malkals/our-project/issues)
+ 
+ ## Disclaimer
+This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
+
+Please visit our wiki for furthur project info: 
 
 
 ### [User Manual](https://github.com/malkals/our-project/wiki/User-Manual)

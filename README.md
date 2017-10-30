@@ -18,8 +18,8 @@ link of project
 ### Project Documents
 - [Project idea](https://drive.google.com/file/d/0ByckaStEeMspWG5hUjcyeTJKZm8/view) ([Presentation](https://drive.google.com/file/d/0ByckaStEeMspTXF4VU8yMVlnTGc/view))
 - [Project Inception]
-- [Software Requirements Specification]
-- [Software Design Specification]
+- [Software Requirements Specification](https://github.com/malkals/our-project/wiki)
+- [Software Design Specification](https://github.com/malkals/our-project/wiki)
 
 
 

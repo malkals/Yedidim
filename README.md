@@ -11,6 +11,7 @@ The application offers streamlining of the organization's volunteers. Synchroniz
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yedidim_group/Lobby)
  [![GitHub issues](https://img.shields.io/github/issues/jce-il/our-project.svg?style=flat)](https://github.com/malkals/our-project/issues)
+ project management board:[here](https://github.com/malkals/Yedidim/projects/1)
  
  ## Disclaimer
 This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.

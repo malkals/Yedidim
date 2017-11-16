@@ -29,7 +29,7 @@ Please visit our wiki for furthur project info:
 - [Software Design Specification](https://github.com/malkals/Yedidim/wiki/SDS-Software-Design-Specifications)
 
 ### Iteration Pages
-- [Iteration 0 - ZFR](https://github.com/malkals/our-project/wiki)
+- [Iteration 0 - ZFR](https://github.com/malkals/Yedidim/wiki/Iteration-0-ZFR)
 - [Iteration 1 - MVP]()
 - [Iteration 2 - Feature X]()
 - [Iteration 3 - Feature Y]()

@@ -10,7 +10,7 @@ The application offers streamlining of the organization's volunteers. Synchroniz
 
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yedidim_group/Lobby)
- [![GitHub issues](https://img.shields.io/github/issues/jce-il/our-project.svg?style=flat)](https://github.com/malkals/our-project/issues)
+ [![GitHub issues](https://img.shields.io/github/issues/jce-il/our-project.svg?style=flat)](https://github.com/malkals/our-project/issues) </br>
  project management board:[here](https://github.com/malkals/Yedidim/projects/1)
  
  ## Disclaimer

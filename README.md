@@ -5,7 +5,7 @@ The application offers streamlining of the organization's volunteers. Synchroniz
 ![project logo](https://raw.githubusercontent.com/malkals/our-project/master/%D7%9C%D7%95%D7%92%D7%95%20%D7%99%D7%93%D7%99%D7%93%D7%99%D7%9D.png)
 
 
-## Please visit our [live application](https://github.com/riki-r/my-project/blob/master/src/index.html)
+## Please visit our [live application](https://yedidim-project.firebaseapp.com/)
 - Alright, currently only a landing page...
 
 

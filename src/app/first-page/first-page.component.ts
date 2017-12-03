@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-first-page',
@@ -7,7 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstPageComponent implements OnInit {
 
-  constructor() { }
+  constructor( public router:Router ) {
+  
+  }
+    login() : void
+    {
+      this.router.navigate(["login"]);
+    }
+
+   request_help(): void
+   {
+     this.router.navigate(["request"]);
+   }
+new_volun(): void{
+  this.router.navigate(["first-login"]);
+}
+   
 
   ngOnInit() {
   }

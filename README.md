@@ -1,41 +1,27 @@
-# Yedidim
-The application offers streamlining of the organization's volunteers. Synchronization between the various volunteers and prevention of inefficiency.
+# YedidimProject
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
 
-![project logo](https://raw.githubusercontent.com/malkals/our-project/master/%D7%9C%D7%95%D7%92%D7%95%20%D7%99%D7%93%D7%99%D7%93%D7%99%D7%9D.png)
+## Development server
 
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Please visit our [live application](https://yedidim-project.firebaseapp.com/)
-- Alright, currently only a landing page...
+## Code scaffolding
 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yedidim_group/Lobby)
- [![GitHub issues](https://img.shields.io/github/issues/jce-il/our-project.svg?style=flat)](https://github.com/malkals/our-project/issues) </br>
- project management board:[here](https://github.com/malkals/Yedidim/projects/1)
- 
- ## Disclaimer
-This project is developed as part of the requirements for a [software engineering course](https://github.com/jce-il/se-class/wiki) at the software engineering department - [Azrieli College of Engineering](http://www.jce.ac.il/), Jerusalem, Israel.
+## Build
 
-Please visit our wiki for furthur project info: 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
+## Running unit tests
 
-### [User Manual](https://github.com/malkals/our-project/wiki/User-Manual) (empty for now)
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-### [Team Page](https://github.com/malkals/our-project/wiki/Team-page)
+## Running end-to-end tests
 
-### Project Documents
-- [Project idea](https://drive.google.com/file/d/0ByckaStEeMspWG5hUjcyeTJKZm8/view) ([Presentation](https://drive.google.com/file/d/0ByckaStEeMspTXF4VU8yMVlnTGc/view))
-- [Project Inception](https://github.com/malkals/Yedidim/wiki/Inception)
-- [Software Requirements Specification](https://github.com/malkals/Yedidim/wiki/SRS--software-requirements-specifications)
-- [Software Design Specification](https://github.com/malkals/Yedidim/wiki/SDS-Software-Design-Specifications)
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-### Iteration Pages
-- [Iteration 0 - ZFR](https://github.com/malkals/Yedidim/wiki/Iteration-0-ZFR)
-- [Iteration 1 - MVP](https://github.com/malkals/Yedidim/wiki/Iteration-1-MVP)
-- [Iteration 2 - Feature X](https://github.com/malkals/Yedidim/wiki/Iteration-2---Feature-X)
-- [Iteration 3 - Feature Y]()
-- [Iteration 4 - Feature Z]()
+## Further help
 
-
-
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

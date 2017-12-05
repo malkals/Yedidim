@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./request-help.component.css']
 })
 export class RequestHelpComponent implements OnInit {
-
+  city = ['','ירושלים', 'תל-אביב', 'חיפה','נתניה','אשדוד'];
   constructor() { }
 
   ngOnInit() {

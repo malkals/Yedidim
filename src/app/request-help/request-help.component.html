@@ -27,11 +27,12 @@
         <input type="text" id="lname" name="lastname" placeholder="שם משפחה">
         <input type="tel" id="tel" name="tel" placeholder="מס' פלאפון">
         <label for="city">העיר בה אתה נמצא כרגע </label>
-        <select id="city" name="city" >
-          <option value="australia">ירושלים</option>
-          <option value="canada">תל אביב</option>
-          <option value="usa">בני ברק</option>
-        </select>
+        <select id="city" name="city"  >
+          <option *ngFor="let p of city" [value]="p">{{p}}</option>
+        
+      </select>
+
+
         <input type="tel" id="tel" name="tel" placeholder="הכנס כתובת מדויקת">
         <label for="fname"> פרטי הארוע</label>
         <input type="text" id="fnamee" name="firstname" placeholder="פרט/י את הארוע">

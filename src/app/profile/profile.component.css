@@ -145,7 +145,16 @@ div.desc {
     clear: both;
 }
   
-
+div.logo img {
+    width: 30%;
+    height: 30%;
+    margin-right:100%;
+    margin-top: -30%;
+    
+   
+    
+    
+}
 
 
 

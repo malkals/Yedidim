@@ -1,23 +1,22 @@
 .header
 {
-    display:flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 12%;
-    background-color: rgb(131, 88, 172);
+    
+    width: 100%;
+    
+    padding:17px;
     top:0%;
-    position: absolute;
+    background-color: rgb(131, 88, 172);
+    
 }
 .title
 {
-    display:flex;
+    
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
     font-size: 120%;
-    position:absolute;
-    left:47%;
-    top:28%;
+    text-align: center;
 }
+
 
 .container {
     font-family: Arial, Helvetica, sans-serif;
@@ -31,11 +30,6 @@
 
 
 
-.logo {
-    width: 213px;
-    height: 36px;
-    margin: 80px auto;
-}
 
 .login-block {
     width: 320px;
@@ -112,8 +106,40 @@
     background: rgb(195, 160, 229);
 }
 
-.log
-{
-    height: 90%;
-    width: 20%;
+.responsive {
+    
+      float: left;
+      width: 24.99999%;
+      top:5%;
+      position: absolute;
+      
+      
+  }
+  
+  @media only screen and (max-width: 700px){
+      .responsive {
+          width: 49.99999%;
+          margin: 5px 0;
+      }
+  }
+  
+  @media only screen and (max-width: 500px){
+      .responsive {
+          width: 100%;
+      }
+  }
+  
+  div.logo img {
+      width: 16%;
+      height: 16%;
+      margin-right: 100%;
+      
+      
+  }
+  .space {
+    width: 213px;
+    height: 20px;
+    margin: 50px auto;
 }
+
+  

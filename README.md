@@ -21,14 +21,14 @@ Please visit our wiki for furthur project info:
 ### [Team Page](https://github.com/malkals/our-project/wiki/Team-page)
 
 ### Project Documents
- [Project idea](https://drive.google.com/file/d/0ByckaStEeMspWG5hUjcyeTJKZm8/view) ([Presentation](https://drive.google.com/file/d/0ByckaStEeMspTXF4VU8yMVlnTGc/view))<br>
- [Project Inception](https://github.com/malkals/Yedidim/wiki/Inception)<br>
- [Software Requirements Specification](https://github.com/malkals/Yedidim/wiki/SRS--software-requirements-specifications)<br>
- [Software Design Specification](https://github.com/malkals/Yedidim/wiki/SDS-Software-Design-Specifications)
+*  [Project idea](https://drive.google.com/file/d/0ByckaStEeMspWG5hUjcyeTJKZm8/view) ([Presentation](https://drive.google.com/file/d/0ByckaStEeMspTXF4VU8yMVlnTGc/view))<br>
+ * [Project Inception](https://github.com/malkals/Yedidim/wiki/Inception)<br>
+ * [Software Requirements Specification](https://github.com/malkals/Yedidim/wiki/SRS--software-requirements-specifications)<br>
+*  [Software Design Specification](https://github.com/malkals/Yedidim/wiki/SDS-Software-Design-Specifications)
  
  ### Iteration Pages
- [Iteration 0 - ZFR](https://github.com/malkals/Yedidim/wiki/Iteration-0-ZFR)<br>
-  [Iteration 1 - MVP](https://github.com/malkals/Yedidim/wiki/Iteration-1-MVP)<br>
- [Iteration 2 - Feature X](https://github.com/malkals/Yedidim/wiki/Iteration-2---Feature-X)<br>
-  [Iteration 3 - Feature Y]()<br>
- [Iteration 4 - Feature Z]()
+*  [Iteration 0 - ZFR](https://github.com/malkals/Yedidim/wiki/Iteration-0-ZFR)<br>
+ *  [Iteration 1 - MVP](https://github.com/malkals/Yedidim/wiki/Iteration-1-MVP)<br>
+*  [Iteration 2 - Feature X](https://github.com/malkals/Yedidim/wiki/Iteration-2---Feature-X)<br>
+ * [Iteration 3 - Feature Y]()<br>
+* [Iteration 4 - Feature Z]()

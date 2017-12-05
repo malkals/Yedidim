@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from "@angular/router";
 @Component({
   selector: 'app-first-login',
   templateUrl: './first-login.component.html',
@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor( public router:Router ) {}
+  signup() : void
+  {
+    this.router.navigate(["profile"]);
+  }
 
   ngOnInit() {
   }

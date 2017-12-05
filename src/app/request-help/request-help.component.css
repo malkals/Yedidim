@@ -84,8 +84,9 @@ input[type=submit]:hover {
 }
 
 div.gallery img {
-    width: 25%;
-    height: 25%;
+    width: 12%;
+    height: 12%;
+    margin-left: -15%;
 }
 
 div.desc {
@@ -116,7 +117,7 @@ div.desc {
 
 .clearfix:after {
     content: "";
-    display: table;
+    
     clear: both;
 }
   

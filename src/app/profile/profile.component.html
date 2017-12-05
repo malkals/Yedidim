@@ -22,11 +22,11 @@
         <input type="text" id="lname" name="lastname" placeholder="שם משפחה">
         <input type="tel" id="tel" name="tel" placeholder="מס' פלאפון">
         <label for="city">עיר מגורים</label>
-        <select id="city" name="city">
-          <option value="australia">ירושלים</option>
-          <option value="canada">תל אביב</option>
-          <option value="usa">בני ברק</option>
-        </select>
+        <select id="city" name="city"  >
+          <option *ngFor="let p of city" [value]="p">{{p}}</option>
+        
+      </select>
+
         <label >סיווג מקצועי </label>
         <br><br><label > .לצורך שיפור מענה הקריאות, אנא בחר את תחומי הסיוע מהם הנך מעוניין לקבל קריאות </label>
         <br><label > . קריאות בתחומים שונים מהמוזכרים להלן-ישלחו לכל המתנדבים </label>

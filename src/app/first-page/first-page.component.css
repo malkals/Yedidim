@@ -142,4 +142,44 @@ div.logo img {
     height: 20px;
     margin: 50px auto;
 }
+#mySidenav a {
+    position:absolute;
+    left: -80px;
+    transition: 0.9s;
+    padding: 7px;
+    width: 100px;
+    
+    font-size: 20px;
+    color: white;
+    border-radius: 0 25px 25px 0;
+    margin-top: 12%;
+}
 
+#mySidenav a:hover {
+    left: 0;
+}
+
+#about {
+    top: 20px;
+    background-color:rgb(168, 163, 163)
+}
+
+#blog {
+    top: 70px;
+    background-color: rgb(168, 163, 163)
+}
+
+#projects {
+    top: 120px;
+    background-color: rgb(168, 163, 163)
+}
+
+#contact {
+    top: 170px;
+    background-color: rgb(168, 163, 163)
+}
+#aaa
+{
+    height: 40%;
+    width: 40%;
+}

@@ -4,7 +4,7 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { LoginComponent }  from './login/login.component';
 import { ProfileComponent } from './profile/profile.component'
 import {RequestHelpComponent} from './request-help/request-help.component';
-import { FirstLoginComponent } from './first-login/first-login.component';
+
 
 
 
@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'profile' , component: ProfileComponent},
   { path: 'request' , component: RequestHelpComponent},
-  { path: 'first-login' , component: FirstLoginComponent}
+
 
 ];
 

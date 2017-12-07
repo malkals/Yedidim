@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import {FirebaseService} from '../service/firebase/firebase.service' ; 
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-first-page',
@@ -8,7 +11,7 @@ import { Router } from "@angular/router";
 })
 export class FirstPageComponent implements OnInit {
 
-  constructor( public router:Router ) {
+  constructor( public router:Router ,public firebaseService: FirebaseService, afAuth:AngularFireAuth  ) {
   
   }
     login() : void
@@ -21,7 +24,10 @@ export class FirstPageComponent implements OnInit {
      this.router.navigate(["request"]);
    }
 new_volun(): void{
-  this.router.navigate(["first-login"]);
+  this.firebaseService.login().then(user=>
+    {
+      this.router.navigate(["profile"]);
+    })
 }
    
 

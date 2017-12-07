@@ -7,9 +7,24 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { RequestHelpComponent } from './request-help/request-help.component';
 import { ProfileComponent } from './profile/profile.component';
-import { FirstLoginComponent } from './first-login/first-login.component';
+
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireModule } from 'angularfire2';
+import {AngularFirestoreModule} from "angularfire2/firestore";
+import {FirebaseService} from './service/firebase/firebase.service' ; 
 
 
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyDgF3i3um5QkpvlEB6ZBOYP35OB419fTow",
+    authDomain: "yedidim-project.firebaseapp.com",
+    databaseURL: "https://yedidim-project.firebaseio.com",
+    projectId: "yedidim-project",
+    storageBucket: "yedidim-project.appspot.com",
+    messagingSenderId: "332505901"
+  }
+};
 
 @NgModule({
   declarations: [
@@ -18,14 +33,19 @@ import { FirstLoginComponent } from './first-login/first-login.component';
     LoginComponent,
     RequestHelpComponent,
     ProfileComponent,
-    FirstLoginComponent
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features
+    AngularFirestoreModule
    
   ],
-  providers: [],
+  providers: [
+    FirebaseService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

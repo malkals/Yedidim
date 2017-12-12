@@ -15,12 +15,12 @@
         
         </div>
       
-      <form action="/action_page.php">
+      <form action="/action_page.php" ng-controller="ProfileController">
 
         <label for="fname">פרטים אישיים</label>
-        <input type="text" id="fname" name="firstname" placeholder="שם פרטי">
-        <input type="text" id="lname" name="lastname" placeholder="שם משפחה">
-        <input type="tel" id="tel" name="tel" placeholder="מס' פלאפון">
+        <input type="text" [(ngModel)]="firstname" name="firstname" placeholder="שם פרטי">
+        <input type="text" [(ngModel)]="lastname" name="lastname"  placeholder="שם משפחה">
+        <input type="tel" [(ngModel)]="phone" name="phone"  placeholder="מס' פלאפון">
         <label for="city">עיר מגורים</label>
         <select id="city" name="city"  >
           <option *ngFor="let p of city" [value]="p">{{p}}</option>
@@ -109,7 +109,8 @@
         <div class="clearfix"></div>
  
 
-      <br>  <input  type="submit" value="הצטרפות לארגון" >
+      <br> 
+       <input (click)='submit()' type="submit" value="הצטרפות לארגון" >
     
       </form>
       

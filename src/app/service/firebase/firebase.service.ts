@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { AngularFirestoreDocument, AngularFirestore } from "angularfire2/firestore";
+import { Volunteer} from '../../models/volunteer.model';
 
 @Injectable()
 export class FirebaseService {
@@ -10,7 +11,11 @@ export class FirebaseService {
 
   private _profile;
   private _id: string;
-  constructor(public afAuth: AngularFireAuth, private afsDocument: AngularFirestore) { }
+  volunteer: Observable <Volunteer>;
+  constructor(public afAuth: AngularFireAuth, private afsDocument: AngularFirestore) { 
+
+  }
+  
 
   login() {
     return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
@@ -26,7 +31,7 @@ export class FirebaseService {
     });
   }
 
-  private get id() {
+  private getid() {
     if (this.afAuth.auth.currentUser)
       this._id = this.afAuth.auth.currentUser.uid;
     else
@@ -34,13 +39,15 @@ export class FirebaseService {
     return this._id;
   }
 
-  updtaeProfile(obj) {
+
+
+  updateProfile(obj) {
     this._profile = obj;
     this.update();
   }
 
   private update() {
-    if(this._id.length > 0)
+    if( this.getid().length  > 0)
       this.afsDocument.doc("users/" + this._id).set(this._profile).then(res => {
 
       });

@@ -12,6 +12,10 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
 import {AngularFirestoreModule} from "angularfire2/firestore";
 import {FirebaseService} from './service/firebase/firebase.service' ; 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 export const environment = {
@@ -40,7 +44,14 @@ export const environment = {
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    MatButtonModule,
+     MatCheckboxModule,
+     FormsModule, 
+     ReactiveFormsModule
+
    
   ],
   providers: [

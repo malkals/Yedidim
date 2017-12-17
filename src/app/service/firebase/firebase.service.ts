@@ -12,10 +12,7 @@ export class FirebaseService {
   private _profile;
   private _id: string;
   private _email:string;
-
- 
-
-public volunteerRef;
+  public volunteerRef;
   
 
 
@@ -29,6 +26,7 @@ public volunteerRef;
     return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
 
   }
+
   logout() {
     this.afAuth.auth.signOut();
   }
@@ -38,6 +36,12 @@ public volunteerRef;
       this._profile = user;
     });
   }
+  private check_volun()
+  {
+    
+  }
+
+
 
   private getid() {
     if (this.afAuth.auth.currentUser)
@@ -46,6 +50,8 @@ public volunteerRef;
       this._id = "";
     return this._id;
   }
+
+
   private getEmail() {
     if (this.afAuth.auth.currentUser)
       this._email=this.afAuth.auth.currentUser.email;
@@ -71,12 +77,14 @@ public volunteerRef;
       });
   }
 
-   public btn1Submit(firstname,lastname,phone)
+   public btn1Submit(firstname,lastname,phone,exsist)
   {
     this.volunteerRef.doc(this.getEmail()).set({
      firstname:firstname,
      lastname:lastname,
-     phone:phone
+     phone:phone,
+     exsist:true
+    
     
       
     });

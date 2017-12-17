@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainVolunteerComponent } from './main-volunteer.component';
+import { VolunteerPageComponent } from './volunteer-page.component';
 
-describe('MainVolunteerComponent', () => {
-  let component: MainVolunteerComponent;
-  let fixture: ComponentFixture<MainVolunteerComponent>;
+describe('VolunteerPageComponent', () => {
+  let component: VolunteerPageComponent;
+  let fixture: ComponentFixture<VolunteerPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainVolunteerComponent ]
+      declarations: [ VolunteerPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainVolunteerComponent);
+    fixture = TestBed.createComponent(VolunteerPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

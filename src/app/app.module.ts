@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FirstPageComponent } from './first-page/first-page.component';
-import { LoginComponent } from './login/login.component';
+
 import { AppRoutingModule } from './/app-routing.module';
 import { RequestHelpComponent } from './request-help/request-help.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -16,7 +16,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { MainVolunteerComponent } from './main-volunteer/main-volunteer.component';
+=======
+import { VolunteerPageComponent } from './volunteer-page/volunteer-page.component';
+>>>>>>> 1489427c90064bf387de9309f0fe958c42699947
 
 
 export const environment = {
@@ -35,10 +39,13 @@ export const environment = {
   declarations: [
     AppComponent,
     FirstPageComponent,
-    LoginComponent,
     RequestHelpComponent,
     ProfileComponent,
+<<<<<<< HEAD
     MainVolunteerComponent,
+=======
+    VolunteerPageComponent,
+>>>>>>> 1489427c90064bf387de9309f0fe958c42699947
    
   ],
   imports: [

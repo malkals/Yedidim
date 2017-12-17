@@ -14,8 +14,9 @@ export class ProfileComponent implements OnInit {
 
 public firstname:string;
 public lastname:string;
- public phone:string;
+ public phone:number;
  public _city:string;
+ public exsist:boolean;
  types: any[];
  type:string;
 
@@ -42,8 +43,12 @@ public lastname:string;
    }
    btnSubmit()
    {
+<<<<<<< HEAD
    this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone);
    this.router.navigate(["main-volunteer"]);
+=======
+   this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.exsist);
+>>>>>>> 1489427c90064bf387de9309f0fe958c42699947
     
    }
   // submit()

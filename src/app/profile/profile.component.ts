@@ -12,29 +12,46 @@ import { Router } from "@angular/router";
 })
 export class ProfileComponent implements OnInit {
 
-  firstname:string;
-  lastname:string;
-  phone:string;
+public firstname:string;
+public lastname:string;
+ public phone:string;
+ public _city:string;
+ types: any[];
+ type:string;
 
   
 
-  newVolunteer: Volunteer;
-  city = ['','ירושלים', 'תל-אביב', 'חיפה','נתניה','אשדוד'];
-  constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService,) {
+ // newVolunteer: Volunteer;
+  //city = ['','ירושלים', 'תל-אביב', 'חיפה','נתניה','אשדוד'];
+  constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService, ) {
+
+    this.types = [{value: 1 , valueToShow: "צוות סיור" },
+    {value: 2 , valueToShow: "רכז אזור" },
+    {value: 3 , valueToShow: "מנהל כללי" }];
+
+
+    
+    //this._city =this.type[this.types.values].text;
     
    }
-   submit()
+   btnSubmit()
    {
-     this.newVolunteer= new Volunteer ();
-     this.newVolunteer.name = this.firstname;
-     this.newVolunteer.lastname=this.lastname;
-     this.newVolunteer.phone=this.phone;
-     //console.log(this.firstname);
-     this.firebaseService.updateProfile(this.newVolunteer);
-     this.router.navigate(["first-page"]);
+   this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone);
+    
    }
+  // submit()
+  // {
+    
+   //  this.newVolunteer= new Volunteer ();
+   //  this.newVolunteer.name = this.firstname;
+    // this.newVolunteer.lastname=this.lastname;
+    // this.newVolunteer.phone=this.phone;
+     //console.log(this.firstname);
+    // this.firebaseService.updateProfile(this.newVolunteer);
+    // this.router.navigate(["first-page"]);
+  // }
 
-
+ // public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService,
 
   ngOnInit() {
   }

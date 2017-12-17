@@ -1,45 +1,46 @@
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container">
+
+  <div class="header">
+      <h1 class=title>הצטרפות לארגון</h1>
+  </div> 
+   
+  <label for="fname">פרטים אישיים</label>
+  <input type="text" [(ngModel)]="firstname" placeholder="שם פרטי">
+  <input type="text" [(ngModel)]="lastname"  placeholder="שם משפחה">
+  <input type="tel" [(ngModel)]="phone"  placeholder="מס' פלאפון">
+  <label for="city">עיר מגורים</label>
+
+
   
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-<br> <div class="container">
 
-    <div class="header">
-        <h1 class=title>הצטרפות לארגון</h1>
-        
-        
-        </div>
-      
-      <form action="/action_page.php" ng-controller="ProfileController">
 
-        <label for="fname">פרטים אישיים</label>
-        <input type="text" [(ngModel)]="firstname" name="firstname" placeholder="שם פרטי">
-        <input type="text" [(ngModel)]="lastname" name="lastname"  placeholder="שם משפחה">
-        <input type="tel" [(ngModel)]="phone" name="phone"  placeholder="מס' פלאפון">
-        <label for="city">עיר מגורים</label>
-        <select id="city" name="city"  >
-          <option *ngFor="let p of city" [value]="p">{{p}}</option>
-        
-      </select>
 
-        <label >סיווג מקצועי </label>
-        <br><br><label > .לצורך שיפור מענה הקריאות, אנא בחר את תחומי הסיוע מהם הנך מעוניין לקבל קריאות </label>
-        <br><label > . קריאות בתחומים שונים מהמוזכרים להלן-ישלחו לכל המתנדבים </label>
-       
-        
-        <div class="responsive">
-          <div class="gallery">
-            <a target="_blank" href="img_fjords.jpg">
-              <img src="assets/delek.png" alt="Trolltunga Norway" width="300" height="200">
-            </a>
-            <div class="desc">הבאת דלק מהתחנה הקרובה</div>
-          </div>
-        </div>
+  
+  <select (change)='city = $event.target.value'  >
+  <option *ngFor="let p of types" [value]="p.value" >{{p.valueToShow}}</option>  
+  </select>
+  <label >סיווג מקצועי </label>
+  <br><br>
+  <label > .לצורך שיפור מענה הקריאות, אנא בחר את תחומי הסיוע מהם הנך מעוניין לקבל קריאות </label>
+  <br>
+  <label > . קריאות בתחומים שונים מהמוזכרים להלן-ישלחו לכל המתנדבים </label>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_fjords.jpg">
+        <img src="assets/delek.png" alt="Trolltunga Norway" width="300" height="200">
+      </a>
+      <div class="desc">הבאת דלק מהתחנה הקרובה</div>
+    </div>
+  </div>
         
         
         <div class="responsive">
@@ -106,12 +107,11 @@
         </div>
        
         
-        <div class="clearfix"></div>
+      <div class="clearfix"></div>
  
 
       <br> 
-       <input (click)='submit()' type="submit" value="הצטרפות לארגון" >
+       <button (click)="btnSubmit()" class="btnSubmit">הצטרפות לארגון </button>
     
-      </form>
       
     </div>

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
-import { AngularFirestoreDocument, AngularFirestore } from "angularfire2/firestore";
+import { AngularFirestoreDocument, AngularFirestore, AngularFirestoreCollection } from "angularfire2/firestore";
 import { Volunteer} from '../../models/volunteer.model';
 
 @Injectable()
@@ -11,10 +11,18 @@ export class FirebaseService {
 
   private _profile;
   private _id: string;
-  volunteer: Observable <Volunteer>;
-  constructor(public afAuth: AngularFireAuth, private afsDocument: AngularFirestore) { 
+  private _email:string;
 
+ 
+
+public volunteerRef;
+  
+
+
+  constructor(public afAuth: AngularFireAuth, private afsDocument: AngularFirestore) { 
+   this.volunteerRef=this.afsDocument.collection("volunteers");
   }
+
   
 
   login() {
@@ -38,6 +46,16 @@ export class FirebaseService {
       this._id = "";
     return this._id;
   }
+  private getEmail() {
+    if (this.afAuth.auth.currentUser)
+      this._email=this.afAuth.auth.currentUser.email;
+    else
+      this._email = "";
+    return this._email;
+
+
+
+  }
 
 
 
@@ -51,6 +69,17 @@ export class FirebaseService {
       this.afsDocument.doc("users/" + this._id).set(this._profile).then(res => {
 
       });
+  }
+
+   public btn1Submit(firstname,lastname,phone)
+  {
+    this.volunteerRef.doc(this.getEmail()).set({
+     firstname:firstname,
+     lastname:lastname,
+     phone:phone
+    
+      
+    });
   }
 
 

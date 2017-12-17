@@ -56,7 +56,7 @@ input[type=tel], select, textarea {
 }
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
+.btnSubmit {
   
     background-color:rgb(131, 88, 172);
     color: white;
@@ -72,7 +72,7 @@ input[type=submit] {
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
+.btnSubmit:hover {
     background-color: #5841c0;
 }
 

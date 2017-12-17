@@ -10,7 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
-import {AngularFirestoreModule} from "angularfire2/firestore";
+import {AngularFirestoreModule } from "angularfire2/firestore";
 import {FirebaseService} from './service/firebase/firebase.service' ; 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
@@ -50,7 +50,8 @@ export const environment = {
     MatButtonModule,
      MatCheckboxModule,
      FormsModule, 
-     ReactiveFormsModule
+     ReactiveFormsModule,
+     
 
    
   ],

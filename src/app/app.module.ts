@@ -16,11 +16,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-<<<<<<< HEAD
-import { MainVolunteerComponent } from './main-volunteer/main-volunteer.component';
-=======
 import { VolunteerPageComponent } from './volunteer-page/volunteer-page.component';
->>>>>>> 1489427c90064bf387de9309f0fe958c42699947
 
 
 export const environment = {
@@ -41,11 +37,7 @@ export const environment = {
     FirstPageComponent,
     RequestHelpComponent,
     ProfileComponent,
-<<<<<<< HEAD
-    MainVolunteerComponent,
-=======
     VolunteerPageComponent,
->>>>>>> 1489427c90064bf387de9309f0fe958c42699947
    
   ],
   imports: [

@@ -32,7 +32,7 @@ public lastname:string;
 
     this.firstname="";
     this.lastname="";
-    this.phone="";
+    this.phone=null;
 
     
 
@@ -43,12 +43,7 @@ public lastname:string;
    }
    btnSubmit()
    {
-<<<<<<< HEAD
-   this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone);
-   this.router.navigate(["main-volunteer"]);
-=======
    this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.exsist);
->>>>>>> 1489427c90064bf387de9309f0fe958c42699947
     
    }
   // submit()

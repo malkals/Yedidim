@@ -80,11 +80,6 @@ export class FirebaseService {
    public btn1Submit(firstname,lastname,phone,exsist)
   {
     this.volunteerRef.doc(this.getEmail()).set({
-<<<<<<< HEAD
-     firstname: firstname,
-     lastname: lastname,
-     phone:phone 
-=======
      firstname:firstname,
      lastname:lastname,
      phone:phone,
@@ -92,7 +87,6 @@ export class FirebaseService {
     
     
       
->>>>>>> 1489427c90064bf387de9309f0fe958c42699947
     });
   }
 

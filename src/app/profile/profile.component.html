@@ -9,23 +9,14 @@
   <div class="header">
       <h1 class=title>הצטרפות לארגון</h1>
   </div> 
-   
+ 
   <label for="fname">פרטים אישיים</label>
-  <input type="text" [(ngModel)]="firstname" placeholder="שם פרטי">
-  <input type="text" [(ngModel)]="lastname"  placeholder="שם משפחה">
-  <input type="tel" [(ngModel)]="phone"  placeholder="מס' פלאפון">
+  <input type="text" [(ngModel)]="firstname" placeholder="שם פרטי" required>
+  <input type="text" [(ngModel)]="lastname"  placeholder="שם משפחה" required>
+  <input type="tel" [(ngModel)]="phone"  placeholder="מס' פלאפון" required>
   <label for="city">עיר מגורים</label>
 
-
-  
-
-
-
-
-
-
-  
-  <select (change)='city = $event.target.value'  >
+  <select id="city1" (change)='city = $event.target.value'  >
   <option *ngFor="let p of types" [value]="p.value" >{{p.valueToShow}}</option>  
   </select>
   <label >סיווג מקצועי </label>
@@ -112,6 +103,7 @@
 
       <br> 
        <button (click)="btnSubmit()" class="btnSubmit">הצטרפות לארגון </button>
+       
     
       
     </div>

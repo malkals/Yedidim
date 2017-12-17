@@ -74,11 +74,9 @@ public volunteerRef;
    public btn1Submit(firstname,lastname,phone)
   {
     this.volunteerRef.doc(this.getEmail()).set({
-     firstname:firstname,
-     lastname:lastname,
-     phone:phone
-    
-      
+     firstname: firstname,
+     lastname: lastname,
+     phone:phone 
     });
   }
 

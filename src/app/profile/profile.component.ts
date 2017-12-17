@@ -21,13 +21,19 @@ public lastname:string;
 
   
 
- // newVolunteer: Volunteer;
+  newVolunteer: Volunteer;
   //city = ['','ירושלים', 'תל-אביב', 'חיפה','נתניה','אשדוד'];
   constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService, ) {
 
     this.types = [{value: 1 , valueToShow: "צוות סיור" },
     {value: 2 , valueToShow: "רכז אזור" },
     {value: 3 , valueToShow: "מנהל כללי" }];
+
+    this.firstname="";
+    this.lastname="";
+    this.phone="";
+
+    
 
 
     
@@ -37,6 +43,7 @@ public lastname:string;
    btnSubmit()
    {
    this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone);
+   this.router.navigate(["main-volunteer"]);
     
    }
   // submit()

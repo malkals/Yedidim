@@ -4,11 +4,11 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { AngularFirestoreDocument, AngularFirestore, AngularFirestoreCollection } from "angularfire2/firestore";
 import { Volunteer} from '../../models/volunteer.model';
+import { Router } from "@angular/router";
 
 @Injectable()
 export class FirebaseService {
   public auth;
-
   private _profile;
   private _id: string;
   private _email:string;
@@ -16,7 +16,7 @@ export class FirebaseService {
   
 
 
-  constructor(public afAuth: AngularFireAuth, private afsDocument: AngularFirestore) { 
+  constructor(public afAuth: AngularFireAuth, private afsDocument: AngularFirestore,public router:Router ) { 
    this.volunteerRef=this.afsDocument.collection("volunteers");
   }
 
@@ -77,17 +77,19 @@ export class FirebaseService {
       });
   }
 
-   public btn1Submit(firstname,lastname,phone,exsist)
+   public btn1Submit(firstname,lastname,phone,category)
   {
     this.volunteerRef.doc(this.getEmail()).set({
      firstname:firstname,
      lastname:lastname,
      phone:phone,
-     exsist:true
+     helpCategory:category
     
     
       
     });
+    this.router.navigate(["volunteer-page"]);
+
   }
 
 

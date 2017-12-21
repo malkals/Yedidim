@@ -17,9 +17,11 @@ public lastname:string;
  public phone:number;
  public _city:string;
  public exsist:boolean;
+ public category:string;
  types: any[];
  type:string;
-
+  categories:string[]=new Array(8);
+  i:number;
   
 
   newVolunteer: Volunteer;
@@ -32,7 +34,9 @@ public lastname:string;
 
     this.firstname="";
     this.lastname="";
+    this.category="";
     this.phone=null;
+    this.i=0;
 
     
 
@@ -41,9 +45,17 @@ public lastname:string;
     //this._city =this.type[this.types.values].text;
     
    }
+
+   sendCtegory(category):void
+   {
+     this.category=category;
+    
+
+   }
+   
    btnSubmit()
    {
-   this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.exsist);
+   this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.category);
     
    }
   // submit()

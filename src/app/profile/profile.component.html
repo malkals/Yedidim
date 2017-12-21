@@ -24,9 +24,10 @@
   <label > .לצורך שיפור מענה הקריאות, אנא בחר את תחומי הסיוע מהם הנך מעוניין לקבל קריאות </label>
   <br>
   <label > . קריאות בתחומים שונים מהמוזכרים להלן-ישלחו לכל המתנדבים </label>
+
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="img_fjords.jpg">
+      <a target="_blank" (click)="sendCtegory('Bringing fuel')">
         <img src="assets/delek.png" alt="Trolltunga Norway" width="300" height="200">
       </a>
       <div class="desc">הבאת דלק מהתחנה הקרובה</div>
@@ -36,7 +37,7 @@
         
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank" href="img_forest.jpg">
+            <a target="_blank" (click)="sendCtegory('Other')">
               <img src="assets/else.png" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">אחר</div>
@@ -45,7 +46,8 @@
        
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank" href="img_forest.jpg">
+            <a target="_blank"(click)="sendCtegory('wheel replacement')">
+            
               <img src="assets/glgll.png" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">החלפת גלגל</div>
@@ -54,7 +56,8 @@
          
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank" href="img_forest.jpg">
+            <a target="_blank"   (click)="sendCtegory('Search for missing persons ')">
+            
               <img src="assets/kol.png" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">חילוץ וחיפוש נעדרים</div>
@@ -62,7 +65,7 @@
         </div>
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank" href="img_forest.jpg">
+            <a target="_blank"  (click)="sendCtegory('car')">
               <img src="assets/car.png" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">   רכב כללי</div>
@@ -71,7 +74,7 @@
         
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank" href="img_forest.jpg">
+            <a target="_blank" (click)="sendCtegory('lockpicking ')">
               <img src="assets/door.png" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">פריצת מנעולים</div>
@@ -81,8 +84,8 @@
           
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank" href="img_forest.jpg">
-              <img src="assets/avir.png" alt="Forest" width="600" height="400">
+            <a target="_blank"  (click)="sendCtegory('Air refill')">
+              <img src="assets/avir.png" alt="Forest" width="600" height="400" >
             </a>
             <div class="desc">מילוי אויר לגלגלי רכב </div>
           </div>
@@ -90,8 +93,8 @@
 
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank" href="img_forest.jpg">
-              <img src="assets/cabel.png" alt="Forest" width="600" height="400 ">
+            <a target="_blank"  (click)="sendCtegory('Car cable')">
+              <img src="assets/cabel.png" alt="Forest" width="600" height="400 " >
             </a>
             <div class="desc"> כבלים לרכב  </div>
           </div>

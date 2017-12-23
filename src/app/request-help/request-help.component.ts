@@ -4,7 +4,6 @@ import { Router } from "@angular/router";
 import { Volunteer} from '../models/volunteer.model';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
-import {MessageService }from 
 
 @Component({
   selector: 'app-request-help',

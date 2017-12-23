@@ -88,6 +88,11 @@ div.gallery img {
     height: 12%;
     margin-left: -15%;
 }
+div.gallery a  :hover{
+
+background: rgb(131, 88, 172);
+}
+
 
 div.desc {
     padding: 15px;

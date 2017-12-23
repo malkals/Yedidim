@@ -76,6 +76,10 @@ export class FirebaseService {
 
       });
   }
+  public req_submit(firstname,lastname,phone,adrress,detailsEvent,category)
+  {
+
+  }
 
    public btn1Submit(firstname,lastname,phone,category)
   {

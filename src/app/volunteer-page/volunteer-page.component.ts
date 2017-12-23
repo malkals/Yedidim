@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-volunteer-page',
@@ -8,7 +9,7 @@ import { Router } from "@angular/router";
 })
 export class VolunteerPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public messageService: MessageService) { }
 
   ngOnInit() {
   }

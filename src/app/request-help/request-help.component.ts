@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { Volunteer} from '../models/volunteer.model';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-request-help',
@@ -20,15 +21,17 @@ export class RequestHelpComponent implements OnInit {
    public adrress:string;
    public detailsEvent:string;
    public category:string;
+ public message:string;
  
- 
-  constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService,) {
+  constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService,private messageService: MessageService) {
    this.firstname="";
    this.lastname="";
    this.phone=null;
    this.adrress="";
    this.detailsEvent="";
    this.category="";
+   this.message="";
+
 
 
    }
@@ -42,7 +45,8 @@ export class RequestHelpComponent implements OnInit {
 
    req_submit()
    {
-   this.firebaseService.req_submit(this.firstname,this.lastname,this.phone,this.adrress,this.detailsEvent,this.category);
+     this.message="שם המבקש: "+this.firstname+" "+this.lastname+"";
+   this.messageService.add(this.message);
 
    }
 

@@ -12,12 +12,12 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
 import {AngularFirestoreModule } from "angularfire2/firestore";
 import {FirebaseService} from './service/firebase/firebase.service' ; 
+import{MessageService}from './message.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VolunteerPageComponent } from './volunteer-page/volunteer-page.component';
-import { MessageComponent } from './message/message.component';
 
 
 export const environment = {
@@ -39,7 +39,7 @@ export const environment = {
     RequestHelpComponent,
     ProfileComponent,
     VolunteerPageComponent,
-    MessageComponent,
+   
    
   ],
   imports: [
@@ -59,7 +59,8 @@ export const environment = {
    
   ],
   providers: [
-    FirebaseService
+    FirebaseService,
+    MessageService
   ],
   bootstrap: [AppComponent]
 })

@@ -102,18 +102,18 @@ export class FirebaseService {
 
   }
 
-   public btn1Submit(firstname,lastname,phone,category,city)
-  {
+   public btn1Submit(firstname,lastname,phone ,city ,category)
+  { console.log(category);
     this.volunteerRef.doc(this.getEmail()).set({
      firstname:firstname,
      lastname:lastname,
      phone:phone,
-     helpCategory:category,
-     city:city
-    
+     city:city,
+     helpCategory:category
     
       
     });
+    
     this.router.navigate(["volunteer-page"]);
 
   }

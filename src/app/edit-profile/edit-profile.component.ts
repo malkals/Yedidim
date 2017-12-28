@@ -59,7 +59,7 @@ export class EditProfileComponent implements OnInit {
 
   btnSubmit()
   {
-  this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.category,this.city);
+  this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.city,this.category);
    
   }
 

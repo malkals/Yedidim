@@ -21,9 +21,7 @@ public lastname:string;
  public exsist:boolean;
  public category:string;
  types: any[];
- type:string;
   categories:string[]=new Array(8);
-  i:number;
   lat: number;
   lng: number;
   
@@ -41,20 +39,21 @@ public lastname:string;
     this.lastname="";
     this.category="";
     this.phone=null;
-    this.i=0;
+    
 
    }
 
    sendCtegory(category):void
    {
      this.category=category;
-    
+    this.categories.push(category);
+    //console.log(this.categories);
 
    }
    
    btnSubmit()
    {
-   this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.category,this.city);
+   this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.category,this.categories);
     
    }
   // submit()

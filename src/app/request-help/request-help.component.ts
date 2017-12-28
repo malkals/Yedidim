@@ -5,6 +5,7 @@ import { Volunteer} from '../models/volunteer.model';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { MessageService } from '../message.service';
+import { Data } from '@angular/router/src/config';
 
 @Component({
   selector: 'app-request-help',
@@ -22,6 +23,8 @@ export class RequestHelpComponent implements OnInit {
    public detailsEvent:string;
    public category:string;
  public message:string;
+public date:Data=new Date();
+public array:string[]=new Array(8);
  
   constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService,private messageService: MessageService) {
    this.firstname="";
@@ -58,7 +61,9 @@ add()
   phone: this.phone,
   category:this.category,
   address:this.adrress,
-  details:this.detailsEvent
+  details:this.detailsEvent,
+  date:this.date
+  
 
 
  })

@@ -33,3 +33,13 @@
     margin-top:6px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
 }
+.date
+{
+    size:100px;
+    left: 10%;
+    top:0%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 80%;
+
+}

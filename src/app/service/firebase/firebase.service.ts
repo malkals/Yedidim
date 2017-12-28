@@ -11,8 +11,12 @@ export class FirebaseService {
   public auth;
   private _profile;
   private _id: string;
+  private _name:string;
   private _email:string;
+  private _phone:number;
   public volunteerRef;
+  private itemdoc:AngularFirestoreDocument<any>;
+  private firstname;
   
 
 
@@ -22,8 +26,11 @@ export class FirebaseService {
 
   
 
-  login() {
-    return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  async login() {
+    let u = await this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+    console.log(u);
+    return this.getUserData(u.user.email);
+    //u.user.photoURL
 
   }
 
@@ -32,9 +39,13 @@ export class FirebaseService {
   }
 
   private getUserData(id: string) {
-    this.afsDocument.doc("users/" + id).valueChanges().subscribe(user => {
-      this._profile = user;
+    return new Promise((res, rej)=>{
+      this.afsDocument.doc("volunteers/" + id).valueChanges().subscribe(user => {
+        this._profile = user;
+        res(this._profile);
+      });
     });
+    
   }
   private check_volun()
   {
@@ -52,13 +63,28 @@ export class FirebaseService {
   }
 
 
-  private getEmail() {
+  public getEmail() {
     if (this.afAuth.auth.currentUser)
       this._email=this.afAuth.auth.currentUser.email;
     else
       this._email = "";
     return this._email;
+  }
+  public getFirstName() {
 
+    if (this.afAuth.auth.currentUser)
+    this._name=this.afAuth.auth.currentUser.displayName;
+  else
+    this._name = "";
+  return this._name;
+
+  }
+  public getPhone(){
+    if (this.afAuth.auth.currentUser)
+    this._name=this.afAuth.auth.currentUser.phoneNumber;
+  else
+    this._phone = null;
+  return this._phone;
 
 
   }
@@ -81,19 +107,32 @@ export class FirebaseService {
 
   }
 
-   public btn1Submit(firstname,lastname,phone,category)
+   public btn1Submit(firstname,lastname,phone,category,city)
   {
     this.volunteerRef.doc(this.getEmail()).set({
      firstname:firstname,
      lastname:lastname,
      phone:phone,
-     helpCategory:category
+     helpCategory:category,
+     city:city
     
     
       
     });
     this.router.navigate(["volunteer-page"]);
 
+  }
+
+  public initFields_name() :any
+  {
+    this.itemdoc=this.afsDocument.doc("volunteers/" +this.getEmail()); 
+    this.itemdoc.valueChanges().subscribe(res=>{
+      
+      this.firstname=res.firstname;
+      
+    
+    });
+    return this.firstname;
   }
 
 

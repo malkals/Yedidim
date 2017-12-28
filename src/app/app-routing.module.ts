@@ -4,6 +4,7 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { ProfileComponent } from './profile/profile.component'
 import {RequestHelpComponent} from './request-help/request-help.component';
 import { VolunteerPageComponent } from './volunteer-page/volunteer-page.component';
+import {EditProfileComponent} from './edit-profile/edit-profile.component';
 
 
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path:'volunteer-page', component: VolunteerPageComponent },
   { path: 'profile' , component: ProfileComponent},
   { path: 'request' , component: RequestHelpComponent},
+  { path: 'edit-profile' , component: EditProfileComponent},
   
 
 ];

@@ -18,6 +18,7 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VolunteerPageComponent } from './volunteer-page/volunteer-page.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 export const environment = {
@@ -39,6 +40,7 @@ export const environment = {
     RequestHelpComponent,
     ProfileComponent,
     VolunteerPageComponent,
+    EditProfileComponent,
    
    
   ],

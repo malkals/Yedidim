@@ -11,12 +11,18 @@
       <div class="header">
           
             <h1 class=title>volunteer page</h1>
+            
+
 
          
               
             </div>
             <div  *ngIf="messageService.messages.length">
               <div *ngFor='let message of messageService.messages'> {{message}} </div>
+            </div>
+
+            <div>
+              <button (click)="edit_profile()" class="btnSubmit"> ערוך פרופיל </button>
             </div>
     
   </div>

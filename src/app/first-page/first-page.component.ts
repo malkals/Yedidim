@@ -18,12 +18,17 @@ export class FirstPageComponent implements OnInit {
     {
       this.firebaseService.login().then(user=>
         {
+          
           this.router.navigate(["main-volunteer"]);
         })
     }
+
+
     exsist_volun(): void{
       this.firebaseService.login().then(user=>
         {
+          console.log(user)
+          
           this.router.navigate(["volunteer-page"]);
         })
     }

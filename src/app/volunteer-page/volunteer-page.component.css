@@ -35,11 +35,11 @@
 }
 .date
 {
-    size:100px;
-    left: 10%;
     top:0%;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     font-size: 80%;
+   
+    width: 35%;
 
 }

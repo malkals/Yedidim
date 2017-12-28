@@ -23,7 +23,7 @@ export class RequestHelpComponent implements OnInit {
    public detailsEvent:string;
    public category:string;
  public message:string;
-public date:Data=new Date();
+ public date:Date=new Date();
 public array:string[]=new Array(8);
  
   constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService,private messageService: MessageService) {
@@ -34,7 +34,7 @@ public array:string[]=new Array(8);
    this.detailsEvent="";
    this.category="";
    this.message="";
-
+  
 
 
    }
@@ -52,6 +52,22 @@ public array:string[]=new Array(8);
 
   this.add();
    }
+
+   format(curr){
+    var dd = curr.getDate();
+  var mm = curr.getMonth()+1; //January is 0!
+  var yyyy =curr.getFullYear();
+  var time=curr.getHours();
+  if(dd<10){
+      dd='0'+dd;
+  } 
+  if(mm<10){
+      mm='0'+mm;
+  } 
+  var today = dd+'/'+mm+'/'+yyyy+"  "+curr.getHours()+":"+curr.getMinutes()+":"+curr.getSeconds();
+  return today;
+  }
+
 add()
 {
  this.messageService.add({
@@ -62,7 +78,7 @@ add()
   category:this.category,
   address:this.adrress,
   details:this.detailsEvent,
-  date:this.date
+  date: this.format(this.date)
   
 
 

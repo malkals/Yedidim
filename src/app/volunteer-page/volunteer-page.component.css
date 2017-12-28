@@ -26,3 +26,10 @@
     text-align: end;
     font-size: medium;
 }
+.message
+{
+    border: 1px solid rgb(69, 19, 99);
+    border-radius: 4px;
+    margin-top:6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+}

@@ -36,11 +36,7 @@ export class FirebaseService {
       this._profile = user;
     });
   }
-  private check_volun()
-  {
-    
-  }
-
+  
 
 
   private getid() {

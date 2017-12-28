@@ -15,9 +15,9 @@
          
               
             </div>
-            <div  *ngIf="messageService.messages.length">
-              <div *ngFor='let message of messageService.messages'> {{message}} </div>
-            </div>
+           <!-- <div  *ngIf="messageService.myMessage.length">-->
+        <div *ngFor='let message of messages'   class="message"> {{message.message}} </div>
+           <!-- </div>-->
     
   </div>
   

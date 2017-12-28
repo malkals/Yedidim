@@ -9,7 +9,7 @@
   <div class="header">
       <h1 class=title>הצטרפות לארגון</h1>
   </div> 
- 
+ <form name="myForm">
   <label for="fname">פרטים אישיים</label>
   <input type="text" [(ngModel)]="firstname" placeholder="שם פרטי" required>
   <input type="text" [(ngModel)]="lastname"  placeholder="שם משפחה" required>
@@ -107,6 +107,6 @@
       <br> 
        <button (click)="btnSubmit()" class="btnSubmit">הצטרפות לארגון </button>
        
-    
+      </form>
       
     </div>

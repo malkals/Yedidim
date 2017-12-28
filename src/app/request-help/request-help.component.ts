@@ -45,11 +45,18 @@ export class RequestHelpComponent implements OnInit {
 
    req_submit()
    {
-     this.message="שם המבקש: "+this.firstname+" "+this.lastname+"";
-   this.messageService.add(this.message);
+     this.message="שם : "+this.firstname+" "+this.lastname +" "+"מס  פאלאפון"+this.phone+" " +"קטגורית סיוע:  "+this.category+"פרטי האירוע:  "+this.detailsEvent;
 
+  this.add();
    }
+add()
+{
+ this.messageService.add({
 
+  message :this.message
+
+ })
+}
 
 
   ngOnInit() {

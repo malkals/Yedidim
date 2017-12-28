@@ -53,7 +53,13 @@ add()
 {
  this.messageService.add({
 
-  message :this.message
+  name :this.firstname,
+  lastname:this.lastname,
+  phone: this.phone,
+  category:this.category,
+  address:this.adrress,
+  details:this.detailsEvent
+
 
  })
 }

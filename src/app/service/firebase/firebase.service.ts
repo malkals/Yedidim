@@ -15,8 +15,7 @@ export class FirebaseService {
   private _email:string;
   private _phone:number;
   public volunteerRef;
-  private itemdoc:AngularFirestoreDocument<any>;
-  private firstname;
+ 
   
 
 
@@ -47,11 +46,7 @@ export class FirebaseService {
     });
     
   }
-  private check_volun()
-  {
-    
-  }
-
+  
 
 
   private getid() {
@@ -123,19 +118,7 @@ export class FirebaseService {
 
   }
 
-  public initFields_name() :any
-  {
-    this.itemdoc=this.afsDocument.doc("volunteers/" +this.getEmail()); 
-    this.itemdoc.valueChanges().subscribe(res=>{
-      
-      this.firstname=res.firstname;
-      
-    
-    });
-    return this.firstname;
-  }
-
-
+ 
 }
 
 

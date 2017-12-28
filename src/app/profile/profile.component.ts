@@ -43,8 +43,6 @@ public lastname:string;
     this.phone=null;
     this.i=0;
 
-    
-    
    }
 
    sendCtegory(category):void

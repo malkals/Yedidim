@@ -21,7 +21,7 @@ public lastname:string;
  public exsist:boolean;
  public category:string;
  types: any[];
-  categories:string[]=new Array(8);
+ public categories:string[]=new Array();
   lat: number;
   lng: number;
   
@@ -47,7 +47,7 @@ public lastname:string;
    {
      this.category=category;
     this.categories.push(category);
-    //console.log(this.categories);
+    console.log(this.categories);
 
    }
    

@@ -64,7 +64,7 @@ public array:string[]=new Array(8);
   if(mm<10){
       mm='0'+mm;
   } 
-  var today = dd+'/'+mm+'/'+yyyy+"  "+curr.getHours()+":"+curr.getMinutes()+":"+curr.getSeconds();
+  var today = dd+'/'+mm+'/'+yyyy+"  "+curr.getHours()+":"+curr.getMinutes();
   return today;
   }
 

@@ -62,7 +62,10 @@ else
 //return this.picture;
 
 }
-
+ok()
+{
+  this.router.navigate(["ok"]);
+}
 
   ngOnInit() {
   }

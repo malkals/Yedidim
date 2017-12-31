@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VolunteerPageComponent } from './volunteer-page/volunteer-page.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MainComponent } from './main/main.component';
+import { OkComponent } from './ok/ok.component';
 
 
 export const environment = {
@@ -43,6 +44,7 @@ export const environment = {
     VolunteerPageComponent,
     EditProfileComponent,
     MainComponent,
+    OkComponent,
    
    
   ],

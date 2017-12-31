@@ -89,7 +89,7 @@ export class RequestHelpComponent implements OnInit {
   if(mm<10){
       mm='0'+mm;
   } 
-  var today = dd+'/'+mm+'/'+yyyy+"  "+curr.getHours()+":"+curr.getMinutes();
+  var today = dd+'/'+mm+'/'+yyyy+"  "+curr.getHours()+":"+curr.getMinutes()+":"+curr.getSeconds();
   return today;
   }
 

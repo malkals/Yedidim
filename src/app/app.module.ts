@@ -19,6 +19,7 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VolunteerPageComponent } from './volunteer-page/volunteer-page.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { MainComponent } from './main/main.component';
 
 
 export const environment = {
@@ -41,6 +42,7 @@ export const environment = {
     ProfileComponent,
     VolunteerPageComponent,
     EditProfileComponent,
+    MainComponent,
    
    
   ],

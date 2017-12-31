@@ -5,11 +5,12 @@ import { ProfileComponent } from './profile/profile.component'
 import {RequestHelpComponent} from './request-help/request-help.component';
 import { VolunteerPageComponent } from './volunteer-page/volunteer-page.component';
 import {EditProfileComponent} from './edit-profile/edit-profile.component';
-
+import {MainComponent} from './main/main.component';
 
 
 const routes: Routes = [
-  { path: "", redirectTo: "first-page", pathMatch: "full" },
+  { path: "", redirectTo: "main", pathMatch: "full" },
+  { path: 'main',component: MainComponent },
   { path:'first-page', component: FirstPageComponent },
   { path:'volunteer-page', component: VolunteerPageComponent },
   { path: 'profile' , component: ProfileComponent},

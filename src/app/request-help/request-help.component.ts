@@ -13,8 +13,35 @@ import { Data } from '@angular/router/src/config';
   styleUrls: ['./request-help.component.css']
 })
 export class RequestHelpComponent implements OnInit {
-  city = ['','ירושלים', 'תל-אביב', 'חיפה','נתניה','אשדוד'];
+  
     
+  city = [  {value: 0 , valueToShow: "" },
+  {value: "אופקים" , valueToShow: "אופקים" },
+{value: "אור יהודה " , valueToShow: " אור יהודה" },
+{value: "אילת" , valueToShow: "אילת" },
+{value: "אפרת" , valueToShow: "אפרת" },
+{value: " אריאל" , valueToShow: "אריאל " },
+{value: "אשדוד" , valueToShow: "אשדוד" },
+{value: "אשקלון" , valueToShow: "אשקלון" },
+{value: " באר שבע" , valueToShow: "באר שבע " },
+{value: "בית שאן" , valueToShow: "בית שאן" },
+{value: "בית שמש" , valueToShow: "בית שמש" },
+{value: " בני ברק" , valueToShow: "בני ברק " },
+{value: "בת ים" , valueToShow: "בת ים" },
+{value: " גבעת שמואל" , valueToShow: " גבעת שמואל" },
+{value: "גדרה" , valueToShow: "גדרה" },
+{value: "הוד השרון" , valueToShow: "הוד השרון" },
+{value: " הרצליה" , valueToShow: "הרצליה " },
+{value: "חדרה" , valueToShow: "חדרה" },
+{value: "חולון" , valueToShow: "חולון" },
+{value: "חיפה " , valueToShow: "חיפה " },
+{value: "טבריה" , valueToShow: "טבריה" },
+{value: "יבנה" , valueToShow: "יבנה" },
+{value: "אלעד" , valueToShow: "אלעד" }
+
+
+
+];
 
   public firstname:string;
   public lastname:string;

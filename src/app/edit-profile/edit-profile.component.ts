@@ -20,8 +20,7 @@ export class EditProfileComponent implements OnInit {
    public category:string;
    types: any[];
    type:string;
-    categories:string[]=new Array(8);
-    i:number;
+   public categories:string[]=new Array();
     lat: number;
     lng: number;
     private itemdoc:AngularFirestoreDocument<any>;
@@ -47,19 +46,21 @@ export class EditProfileComponent implements OnInit {
   });
 
 
-  this.i=0;
+  
    }
 
    sendCtegory(category):void
    {
-     this.category=category;
+    this.category=category;
+    this.categories.push(category);
+    console.log(this.categories);
     
 
    }
 
   btnSubmit()
   {
-  this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.city,this.category);
+  this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.city,this.categories);
    
   }
 

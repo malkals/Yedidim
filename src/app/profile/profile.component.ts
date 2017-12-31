@@ -20,6 +20,7 @@ public lastname:string;
  public city:string;
  public exsist:boolean;
  public category:string;
+ public flag:number;
  types: any[];
  public categories:string[]=new Array();
   lat: number;
@@ -45,8 +46,26 @@ public lastname:string;
 
    sendCtegory(category):void
    {
+    this.flag=0;
      this.category=category;
-    this.categories.push(category);
+    this.categories.forEach(element => {
+      if(element==this.category)
+      { this.flag=1;
+        var index = this.categories.indexOf(element);
+        if (index > -1) 
+        {
+          this.categories.splice(index, 1);
+         }
+      }
+      
+       
+     });
+     if(this.flag==0)
+     {
+      this.categories.push(category);
+     }
+    
+    
     console.log(this.categories);
 
    }

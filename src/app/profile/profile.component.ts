@@ -18,7 +18,6 @@ public firstname:string;
 public lastname:string;
  public phone:number;
  public city:string;
- public exsist:boolean;
  public category:string;
  public flag:number;
  types: any[];
@@ -27,7 +26,6 @@ public lastname:string;
   lng: number;
   
 
-  newVolunteer: Volunteer;
 
   constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService, ) {
 
@@ -72,7 +70,7 @@ public lastname:string;
    
    btnSubmit()
    {
-   this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.category,this.categories);
+   this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.city,this.categories);
     
    }
   // submit()

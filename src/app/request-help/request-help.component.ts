@@ -13,8 +13,7 @@ import { Data } from '@angular/router/src/config';
   styleUrls: ['./request-help.component.css']
 })
 export class RequestHelpComponent implements OnInit {
-  city = ['','ירושלים', 'תל-אביב', 'חיפה','נתניה','אשדוד'];
-    
+  
 
   public firstname:string;
   public lastname:string;
@@ -23,8 +22,13 @@ export class RequestHelpComponent implements OnInit {
    public detailsEvent:string;
    public category:string;
  public message:string;
+ public city:string;
  public date:Date=new Date();
-public array:string[]=new Array(8);
+ types: any[];
+
+ 
+
+
  
   constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService,private messageService: MessageService) {
    this.firstname="";
@@ -34,6 +38,12 @@ public array:string[]=new Array(8);
    this.detailsEvent="";
    this.category="";
    this.message="";
+
+   this.types = [  {value: 0 , valueToShow: "" },
+   {value: "ירושלים" , valueToShow: "ירושלים" },
+  {value: "תל אביב" , valueToShow: "תל אביב" },
+  {value: "חיפה" , valueToShow: "חיפה" }];
+  
   
 
 
@@ -46,12 +56,7 @@ public array:string[]=new Array(8);
 
    }
 
-   req_submit()
-   {
-     this.message="שם : "+this.firstname+" "+this.lastname +" "+"מס  פאלאפון"+this.phone+" " +"קטגורית סיוע:  "+this.category+"פרטי האירוע:  "+this.detailsEvent;
-
-  this.add();
-   }
+   
 
    format(curr){
     var dd = curr.getDate();
@@ -68,7 +73,7 @@ public array:string[]=new Array(8);
   return today;
   }
 
-add()
+  req_submit()
 {
  this.messageService.add({
 
@@ -78,7 +83,8 @@ add()
   category:this.category,
   address:this.adrress,
   details:this.detailsEvent,
-  date: this.format(this.date)
+  date: this.format(this.date),
+  city:this.city
   
 
 

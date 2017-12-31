@@ -26,10 +26,9 @@
         <input type="text"  [(ngModel)]="lastname" placeholder="שם משפחה">
         <input type="tel" [(ngModel)]="phone" placeholder="מס' פלאפון">
         <label for="city">העיר בה אתה נמצא כרגע </label>
-        <select id="city" name="city"  >
-          <option *ngFor="let p of city" [value]="p">{{p}}</option>
-        
-      </select>
+        <select id="city1" (change)='city = $event.target.value'  >
+          <option *ngFor="let p of types" [value]="p.value" >{{p.valueToShow}}</option>  
+          </select>
 
         <input type="text" [(ngModel)]="adrress" placeholder="הכנס כתובת מדויקת">
         <label for="fname"> פרטי הארוע</label>

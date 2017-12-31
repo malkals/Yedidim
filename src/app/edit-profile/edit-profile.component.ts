@@ -18,6 +18,7 @@ export class EditProfileComponent implements OnInit {
    public city:string;
    public exsist:boolean;
    public category:string;
+   public flag:number;
    types: any[];
    type:string;
    public categories:string[]=new Array();
@@ -51,10 +52,27 @@ export class EditProfileComponent implements OnInit {
 
    sendCtegory(category):void
    {
-    this.category=category;
-    this.categories.push(category);
-    console.log(this.categories);
+    this.flag=0;
+     this.category=category;
+    this.categories.forEach(element => {
+      if(element==this.category)
+      { this.flag=1;
+        var index = this.categories.indexOf(element);
+        if (index > -1) 
+        {
+          this.categories.splice(index, 1);
+         }
+      }
+      
+       
+     });
+     if(this.flag==0)
+     {
+      this.categories.push(category);
+     }
     
+    
+    console.log(this.categories);
 
    }
 

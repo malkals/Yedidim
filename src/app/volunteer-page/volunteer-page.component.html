@@ -19,22 +19,26 @@
             </div>
             <br><br>
             <div>
-              <button  (click)="edit_profile()" class="btnSubmit"> ערוך פרטים אישיים </button>
+              <button  (click)="edit_profile()" class="btnSubmit" ><i class="fa fa-edit"></i>   ערוך פרטים אישיים   
+                </button>
             
             </div>
             <br>
-           
+          
           
                 
         <div *ngFor='let message of messages'   class="message" > 
-            <div class="date">{{message.date}}</div>
-          שם : {{message.name}}<br>שם משפחה: {{message.lastname}}
-           <br>פלאפון : {{message.phone}}
-           <br>קטגוריה: {{message.category}}
-           <br> עיר: {{message.city}}
-           <br>כתובת: {{message.address}}
-           <br>פרטים: {{message.details}}
-          
+        <div class="date"><b>{{message.date}}</b></div>
+        <b><div class="titlered">קריאה לעזרה</div></b> 
+        
+        <div class="de"> <b> שם פרטי: </b> {{message.name}}</div>
+        <div class="de"><b>שם משפחה: </b>{{message.lastname}}</div>
+        <div class="de"> <b>פלאפון: </b>{{message.phone}} </div>
+        <div class="de"><b> קטגוריה:</b> {{message.category}}</div>
+        <div class="de"><b> עיר :</b>{{message.city}}</div>
+        <div class="de"><b>  כתובת: </b>{{message.address}}</div>
+        <div class="de"><b>  פרטים :</b>{{message.details}}</div>
+        <button class="yl" (click)=exsist_volun()> <img src="assets/happy.png">   יוצא לארוע </button>
         </div>
             
       

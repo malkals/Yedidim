@@ -163,7 +163,7 @@ div.logo img {
 
 #about {
     top: 27px;
-    background-color:rgb(168, 163, 163)
+    background-color:rgb(168, 163, 163);
 }
 
 #blog {
@@ -179,9 +179,10 @@ div.logo img {
 #contact {
     top: 160px;
     background-color: rgb(168, 163, 163)
+
 }
 #aaa
 {
-    height: 40%;
+    height: 20%;
     width: 40%;
 }

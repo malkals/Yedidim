@@ -14,34 +14,7 @@ import { Data } from '@angular/router/src/config';
 })
 export class RequestHelpComponent implements OnInit {
   
-    
-  city = [  {value: 0 , valueToShow: "" },
-  {value: "אופקים" , valueToShow: "אופקים" },
-{value: "אור יהודה " , valueToShow: " אור יהודה" },
-{value: "אילת" , valueToShow: "אילת" },
-{value: "אפרת" , valueToShow: "אפרת" },
-{value: " אריאל" , valueToShow: "אריאל " },
-{value: "אשדוד" , valueToShow: "אשדוד" },
-{value: "אשקלון" , valueToShow: "אשקלון" },
-{value: " באר שבע" , valueToShow: "באר שבע " },
-{value: "בית שאן" , valueToShow: "בית שאן" },
-{value: "בית שמש" , valueToShow: "בית שמש" },
-{value: " בני ברק" , valueToShow: "בני ברק " },
-{value: "בת ים" , valueToShow: "בת ים" },
-{value: " גבעת שמואל" , valueToShow: " גבעת שמואל" },
-{value: "גדרה" , valueToShow: "גדרה" },
-{value: "הוד השרון" , valueToShow: "הוד השרון" },
-{value: " הרצליה" , valueToShow: "הרצליה " },
-{value: "חדרה" , valueToShow: "חדרה" },
-{value: "חולון" , valueToShow: "חולון" },
-{value: "חיפה " , valueToShow: "חיפה " },
-{value: "טבריה" , valueToShow: "טבריה" },
-{value: "יבנה" , valueToShow: "יבנה" },
-{value: "אלעד" , valueToShow: "אלעד" }
-
-
-
-];
+  
 
   public firstname:string;
   public lastname:string;
@@ -50,8 +23,13 @@ export class RequestHelpComponent implements OnInit {
    public detailsEvent:string;
    public category:string;
  public message:string;
+ public city1 :string;
  public date:Date=new Date();
-public array:string[]=new Array(8);
+ types: any[];
+
+ 
+
+
  
   constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService,private messageService: MessageService) {
    this.firstname="";
@@ -61,6 +39,31 @@ public array:string[]=new Array(8);
    this.detailsEvent="";
    this.category="";
    this.message="";
+
+   this.types = [  {value: 0 , valueToShow: "" },
+   {value: "אופקים" , valueToShow: "אופקים" },
+ {value: "אור יהודה " , valueToShow: " אור יהודה" },
+ {value: "אילת" , valueToShow: "אילת" },
+ {value: "אפרת" , valueToShow: "אפרת" },
+ {value: " אריאל" , valueToShow: "אריאל " },
+ {value: "אשדוד" , valueToShow: "אשדוד" },
+ {value: "אשקלון" , valueToShow: "אשקלון" },
+ {value: " באר שבע" , valueToShow: "באר שבע " },
+ {value: "בית שאן" , valueToShow: "בית שאן" },
+ {value: "בית שמש" , valueToShow: "בית שמש" },
+ {value: " בני ברק" , valueToShow: "בני ברק " },
+ {value: "בת ים" , valueToShow: "בת ים" },
+ {value: " גבעת שמואל" , valueToShow: " גבעת שמואל" },
+ {value: "גדרה" , valueToShow: "גדרה" },
+ {value: "הוד השרון" , valueToShow: "הוד השרון" },
+ {value: " הרצליה" , valueToShow: "הרצליה " },
+ {value: "חדרה" , valueToShow: "חדרה" },
+ {value: "חולון" , valueToShow: "חולון" },
+ {value: "חיפה " , valueToShow: "חיפה " },
+ {value: "טבריה" , valueToShow: "טבריה" },
+ {value: "יבנה" , valueToShow: "יבנה" },
+ {value: "אלעד" , valueToShow: "אלעד" }];
+  
   
 
 
@@ -73,12 +76,7 @@ public array:string[]=new Array(8);
 
    }
 
-   req_submit()
-   {
-     this.message="שם : "+this.firstname+" "+this.lastname +" "+"מס  פאלאפון"+this.phone+" " +"קטגורית סיוע:  "+this.category+"פרטי האירוע:  "+this.detailsEvent;
-
-  this.add();
-   }
+   
 
    format(curr){
     var dd = curr.getDate();
@@ -95,7 +93,7 @@ public array:string[]=new Array(8);
   return today;
   }
 
-add()
+  req_submit()
 {
  this.messageService.add({
 
@@ -105,7 +103,8 @@ add()
   category:this.category,
   address:this.adrress,
   details:this.detailsEvent,
-  date: this.format(this.date)
+  date: this.format(this.date),
+  city:this.city1
   
 
 

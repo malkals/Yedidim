@@ -4,6 +4,8 @@ import { MessageService } from '../message.service';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestoreDocument, AngularFirestore, AngularFirestoreCollection } from "angularfire2/firestore";
 import { Url } from 'url';
+import { forEach } from '@angular/router/src/utils/collection';
+import {FirebaseService} from '../service/firebase/firebase.service' ;
 @Component({
   selector: 'app-volunteer-page',
   templateUrl: './volunteer-page.component.html',
@@ -14,10 +16,33 @@ export class VolunteerPageComponent implements OnInit {
   public auth;
   public picture:any;
   messages: string[];
-  constructor(public router: Router, public messageService: MessageService,private afsDocument: AngularFirestore,public afAuth: AngularFireAuth,) { 
+  public city;
+  private itemdoc:AngularFirestoreDocument<any>;
+
+  constructor(public router: Router, public messageService: MessageService,private afsDocument: AngularFirestore,public afAuth: AngularFireAuth, public firebaseService: FirebaseService) { 
+    this.itemdoc=this.afsDocument.doc("volunteers/" +this.firebaseService.getEmail()); 
+    this.itemdoc.valueChanges().subscribe(res=>{
+      
+      this.city=res.city;
+  
+    
+    });
+
+    
     this.col=this.afsDocument.collection("messages"); 
     this.col.valueChanges().subscribe(res=>{
       this.messages=res;
+      this.messages.forEach(element => {
+        console.log(element);
+        if(element!=this.city)
+        { 
+          var index = this.messages.indexOf(element);
+
+           // this.messages.splice(index, 1);
+        }
+        
+         
+       });
      
     });
    

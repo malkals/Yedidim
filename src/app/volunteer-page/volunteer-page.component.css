@@ -28,6 +28,7 @@
 }
 .message
 {
+    
     border: 1px solid rgb(69, 19, 99);
     border-radius: 4px;
     margin-top:6px; /* Add a top margin */
@@ -41,5 +42,25 @@
     font-size: 80%;
    
     width: 35%;
+
+}
+.btnSubmit
+{
+    width: 30%;
+    height: 28px;
+    background: rgb(131, 88, 172);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgb(131, 88, 172);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Arial;
+    outline: none;
+    cursor: pointer;
+    margin-right: 72%;
+    margin-top: -3%;
+
 
 }

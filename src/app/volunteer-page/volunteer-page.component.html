@@ -10,7 +10,7 @@
 
       <div class="header">
           
-            <h1 class=title>volunteer page</h1>
+            <h1 class=title> פרסום קריאות</h1>
             
           
             
@@ -19,7 +19,7 @@
             </div>
             <br><br>
             <div>
-              <button (click)="edit_profile()" class="btnSubmit"> ערוך פרופיל </button>
+              <button  (click)="edit_profile()" class="btnSubmit"> ערוך פרטים אישיים </button>
             
             </div>
             <br>
@@ -28,8 +28,9 @@
                 
         <div *ngFor='let message of messages'   class="message" > 
             <div class="date">{{message.date}}</div>
-          שם : {{message.name}}<br>שם משפחה: {{message.lastname}} <br>פלאפון : {{message.phone}}<br>קטגוריה: {{message.category}}<br>כתובת: {{message.address}}<br>פרטים: {{message.details}}
-          
+          שם : {{message.name}}<br>שם משפחה: {{message.lastname}} <br>פלאפון :
+           {{message.phone}}<br>קטגוריה: {{message.category}}<br>כתובת: 
+           {{message.address}}<br>פרטים: {{message.details}}
         </div>
             
       

@@ -15,7 +15,7 @@ export class VolunteerPageComponent implements OnInit {
   private col:AngularFirestoreCollection<any>;
   public auth;
   public picture:any;
-  messages: string[];
+  messages: any[];
   public city;
   private itemdoc:AngularFirestoreDocument<any>;
 
@@ -24,21 +24,22 @@ export class VolunteerPageComponent implements OnInit {
     this.itemdoc.valueChanges().subscribe(res=>{
       
       this.city=res.city;
+      
   
     
     });
 
-    
+    console.log(this.city);
     this.col=this.afsDocument.collection("messages"); 
     this.col.valueChanges().subscribe(res=>{
       this.messages=res;
       this.messages.forEach(element => {
-        console.log(element);
-        if(element!=this.city)
+       // console.log(element);
+        if(element.city!=this.city)
         { 
           var index = this.messages.indexOf(element);
 
-           // this.messages.splice(index, 1);
+            this.messages.splice(index, 1);
         }
         
          

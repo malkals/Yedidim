@@ -17,24 +17,25 @@ export class VolunteerPageComponent implements OnInit {
   public picture:any;
   messages: any[];
   public city;
+  public categories:string[]=new Array();
   private itemdoc:AngularFirestoreDocument<any>;
+  public flag:number;
 
   constructor(public router: Router, public messageService: MessageService,private afsDocument: AngularFirestore,public afAuth: AngularFireAuth, public firebaseService: FirebaseService) { 
     this.itemdoc=this.afsDocument.doc("volunteers/" +this.firebaseService.getEmail()); 
     this.itemdoc.valueChanges().subscribe(res=>{
       
       this.city=res.city;
-      
+      this.categories=res.helpCategory;
   
     
     });
 
-    console.log(this.city);
+   console.log(this.city);
     this.col=this.afsDocument.collection("messages"); 
     this.col.valueChanges().subscribe(res=>{
       this.messages=res;
       this.messages.forEach(element => {
-       // console.log(element);
         if(element.city!=this.city)
         { 
           var index = this.messages.indexOf(element);
@@ -44,6 +45,26 @@ export class VolunteerPageComponent implements OnInit {
         
          
        });
+       this.messages.forEach(element => {
+         this.flag=0;
+        this.categories.forEach(Celement => {
+          if(Celement==element.category)
+          { 
+            this.flag=1;
+           
+          }
+          
+           
+         });
+        if(this.flag==0)
+        {
+          var index = this.messages.indexOf(element);
+          
+           this.messages.splice(index, 1);
+        }
+         
+       });
+
      
     });
    

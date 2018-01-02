@@ -23,7 +23,7 @@ export class RequestHelpComponent implements OnInit {
    public detailsEvent:string;
    public category:string;
  public message:string;
- public city1 :string;
+ public city :string;
  public date:Date=new Date();
  types: any[];
 
@@ -104,7 +104,7 @@ export class RequestHelpComponent implements OnInit {
   address:this.adrress,
   details:this.detailsEvent,
   date: this.format(this.date),
-  city:this.city1
+  city:this.city
   
 
 

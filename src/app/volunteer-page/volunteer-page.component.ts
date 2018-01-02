@@ -37,6 +37,7 @@ export class VolunteerPageComponent implements OnInit {
   console.log(this.city);
    this.col=this.afsDocument.collection("messages"); 
     this.col.valueChanges().subscribe(mess=>{
+//this.play();
       this.messages=mess;
       
       
@@ -86,8 +87,14 @@ else
 //return this.picture;
 
 }
+/*play()
+{
+var audio = new Audio('assets/2.mp3');
+audio.play();
+}*/
 ok()
 {
+
   this.router.navigate(["ok"]);
 }
 

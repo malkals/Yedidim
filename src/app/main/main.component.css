@@ -26,6 +26,13 @@
     text-align: end;
     font-size: medium;
 }
+div.logo img {
+    width: 16%;
+    height: 16%;
+    margin-right: 100%;
+    
+    
+}
 
 
 
@@ -129,14 +136,6 @@
     }
 }
 
-div.logo img {
-    width: 16%;
-    height: 16%;
-    margin-right: 100%;
-    margin-top: 0%;
-    
-    
-}
 
 
 .img{

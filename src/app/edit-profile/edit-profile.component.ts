@@ -29,10 +29,31 @@ export class EditProfileComponent implements OnInit {
 
   constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService) {
     this.types = [  {value: 0 , valueToShow: "" },
-    {value: "ירושלים" , valueToShow: "ירושלים" },
-  {value: "תל אביב" , valueToShow: "תל אביב" },
-  {value: "חיפה" , valueToShow: "חיפה" }];
+    {value: "אופקים" , valueToShow: "אופקים" },
+  {value: "אור יהודה " , valueToShow: " אור יהודה" },
+  {value: "אילת" , valueToShow: "אילת" },
+  {value: "אפרת" , valueToShow: "אפרת" },
+  {value: " אריאל" , valueToShow: "אריאל " },
+  {value: "אשדוד" , valueToShow: "אשדוד" },
+  {value: "אשקלון" , valueToShow: "אשקלון" },
+  {value: " באר שבע" , valueToShow: "באר שבע " },
+  {value: "בית שאן" , valueToShow: "בית שאן" },
+  {value: "בית שמש" , valueToShow: "בית שמש" },
+  {value: " בני ברק" , valueToShow: "בני ברק " },
+  {value: "בת ים" , valueToShow: "בת ים" },
+  {value: " גבעת שמואל" , valueToShow: " גבעת שמואל" },
+  {value: "גדרה" , valueToShow: "גדרה" },
+  {value: "הוד השרון" , valueToShow: "הוד השרון" },
+  {value: " הרצליה" , valueToShow: "הרצליה " },
+  {value: "חדרה" , valueToShow: "חדרה" },
+  {value: "חולון" , valueToShow: "חולון" },
+  {value: "חיפה " , valueToShow: "חיפה " },
+  {value: "טבריה" , valueToShow: "טבריה" },
+  {value: "יבנה" , valueToShow: "יבנה" },
+  {value: "ירושלים" , valueToShow: "ירושלים" },
+  {value: "אלעד" , valueToShow: "אלעד" }
 
+];
  
 
   this.itemdoc=this.afs.doc("volunteers/" +this.firebaseService.getEmail()); 

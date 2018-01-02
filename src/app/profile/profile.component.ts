@@ -51,6 +51,7 @@ public lastname:string;
     {value: "חיפה " , valueToShow: "חיפה " },
     {value: "טבריה" , valueToShow: "טבריה" },
     {value: "יבנה" , valueToShow: "יבנה" },
+    {value: "ירושלים" , valueToShow: "ירושלים" },
     {value: "אלעד" , valueToShow: "אלעד" }
   
   

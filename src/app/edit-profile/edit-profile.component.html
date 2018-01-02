@@ -15,7 +15,7 @@
   <input type="tel" [(ngModel)]="phone"  placeholder="מס' פלאפון" required>
   <label for="city">עיר מגורים</label>
 
-  <select id="city1" (change)='city = $event.target.value'  >
+  <select id="city" (change)='city = $event.target.value'  >
   <option *ngFor="let p of types" [value]="p.value" >{{p.valueToShow}}</option>  
   </select>
   <label >סיווג מקצועי </label>
@@ -26,7 +26,7 @@
 
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" (click)="sendCtegory('Bringing fuel')">
+      <a target="_blank" (click)="sendCtegory('הבאת דלק')">
         <img src="assets/delek.png" alt="Trolltunga Norway" width="300" height="200">
       </a>
       <div class="desc">הבאת דלק מהתחנה הקרובה</div>
@@ -36,7 +36,7 @@
         
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank" (click)="sendCtegory('Other')">
+            <a target="_blank" (click)="sendCtegory('אחר')">
               <img src="assets/else.png" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">אחר</div>
@@ -45,7 +45,7 @@
        
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank"(click)="sendCtegory('wheel replacement')">
+            <a target="_blank"(click)="sendCtegory('החלפת גלגל')">
             
               <img src="assets/glgll.png" alt="Forest" width="600" height="400">
             </a>
@@ -55,7 +55,7 @@
          
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank"   (click)="sendCtegory('Search for missing persons ')">
+            <a target="_blank"   (click)="sendCtegory('חילוץ וחיפוש נעדרים ')">
             
               <img src="assets/kol.png" alt="Forest" width="600" height="400">
             </a>
@@ -64,7 +64,7 @@
         </div>
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank"  (click)="sendCtegory('car')">
+            <a target="_blank"  (click)="sendCtegory('רכב')">
               <img src="assets/car.png" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">   רכב כללי</div>
@@ -73,7 +73,7 @@
         
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank" (click)="sendCtegory('lockpicking ')">
+            <a target="_blank" (click)="sendCtegory('פריצת מנעולים ')">
               <img src="assets/door.png" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">פריצת מנעולים</div>
@@ -83,7 +83,7 @@
           
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank"  (click)="sendCtegory('Air refill')">
+            <a target="_blank"  (click)="sendCtegory('מילוי אויר לגלגלי רכב')">
               <img src="assets/avir.png" alt="Forest" width="600" height="400" >
             </a>
             <div class="desc">מילוי אויר לגלגלי רכב </div>
@@ -92,7 +92,7 @@
 
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank"  (click)="sendCtegory('Car cable')">
+            <a target="_blank"  (click)="sendCtegory('כבלים לרכב')">
               <img src="assets/cabel.png" alt="Forest" width="600" height="400 " >
             </a>
             <div class="desc"> כבלים לרכב  </div>

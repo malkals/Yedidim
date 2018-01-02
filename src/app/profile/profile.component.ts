@@ -97,20 +97,7 @@ public lastname:string;
    this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.city,this.categories);
     
    }
-  // submit()
-  // {
-    
-   //  this.newVolunteer= new Volunteer ();
-   //  this.newVolunteer.name = this.firstname;
-    // this.newVolunteer.lastname=this.lastname;
-    // this.newVolunteer.phone=this.phone;
-     //console.log(this.firstname);
-    // this.firebaseService.updateProfile(this.newVolunteer);
-    // this.router.navigate(["first-page"]);
-  // }
-
- // public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService,
-
+  
   ngOnInit() {
   }
 

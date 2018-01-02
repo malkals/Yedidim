@@ -16,7 +16,7 @@ export class VolunteerPageComponent implements OnInit {
   public auth;
   public picture:any;
  private messages: any[];
- private m:any[]=new Array();
+ private messageArray:any[]=new Array();
   private city;
   private categories:string[]=new Array();
   private itemdoc:AngularFirestoreDocument<any>;
@@ -24,6 +24,7 @@ export class VolunteerPageComponent implements OnInit {
 
   constructor(public router: Router, public messageService: MessageService,private afsDocument: AngularFirestore,public afAuth: AngularFireAuth, public firebaseService: FirebaseService) { 
     this.itemdoc=this.afsDocument.doc("volunteers/" +this.firebaseService.getEmail()); 
+    this.getPicture();
 
     this.itemdoc.valueChanges().subscribe(res=>{
       
@@ -58,7 +59,7 @@ export class VolunteerPageComponent implements OnInit {
         if(element.city==this.city&&this.flag==1)
         {  
           
-         this.m.push(element);
+         this.messageArray.push(element);
   
        }
         

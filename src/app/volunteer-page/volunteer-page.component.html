@@ -12,9 +12,11 @@
           
             <h1 class=title> פרסום קריאות</h1>
             
-          
+            <div class="responsive">
+              <img src="{{ picture}}" class="photos" />
+            </div>
             
-         
+          
               
             </div>
             <br><br>
@@ -27,7 +29,7 @@
           
           
                 
-        <div *ngFor='let message of m'   class="message" > 
+        <div *ngFor='let message of messageArray'   class="message" > 
         <div class="date"><b>{{message.date}}</b></div>
         <b><div class="titlered">קריאה לעזרה</div></b> 
         

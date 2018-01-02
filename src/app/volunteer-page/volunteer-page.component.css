@@ -73,6 +73,16 @@
 .date{
     margin-left: -23%;
 }
+.photos
+{
+    width: 35%;
+    height: 35%;
+    margin-left: 165%;
+    margin-top: 5%;
+    border-radius:50px;
+  
+
+}
 .yl
 {
     width: 35%;
@@ -93,3 +103,13 @@
     margin-block-end: 1%;
 
 }
+
+.responsive {
+    
+      float: right;
+      width: 40%;
+      top:5%;
+      position: absolute;
+      
+      
+  }

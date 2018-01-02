@@ -16,6 +16,7 @@ export class VolunteerPageComponent implements OnInit {
   public auth;
   public picture:any;
  private messages: any[];
+ private m:any[]=new Array();
   private city;
   private categories:string[]=new Array();
   private itemdoc:AngularFirestoreDocument<any>;
@@ -41,74 +42,35 @@ export class VolunteerPageComponent implements OnInit {
       if(this.messages!=null)
       {
       this.messages.forEach(element => {
-       
-        if(element.city!=this.city)
-        {  
-          console.log("***********");
-          console.log(element);
-          var index = this.messages.indexOf(element);
-          console.log("***********");
-          console.log(index);
-          if(index>-1)
-          {
-           this.messages.splice(index, 1);
-
-         }
-
+        this.flag=0;
+         
+        this.categories.forEach(Celement => {
+          if(Celement==element.category||Celement=="אחר")
+          { 
+             this.flag=1;
+            
+           }
            
+            
+         });
+
+       
+        if(element.city==this.city&&this.flag==1)
+        {  
+          
+         this.m.push(element);
+  
        }
         
          
        });
-       this.messages.forEach(element => {
-        
-         
-           console.log("after");
-           var index = this.messages.indexOf(element);
-           console.log("***********");
-           console.log(index);
-           console.log(element);
-          
-            
-          
-        });
-
       }
-       console.log("######################");
-      
-     if(this.messages!=null)
-     {
-    this.messages.forEach(element => {
-         this.flag=0;
-        this.categories.forEach(Celement => {
-         if(Celement==element.category||Celement=="אחר")
-         { 
-            this.flag=1;
-           
-          }
-          
-           
-        });
-        if(this.flag==0)
-        {
-         var index = this.messages.indexOf(element);
-          
-         if(index>-1)
-          {
-          this.messages.splice(index, 1);
-
-          }
-
-       }
-         
-      });
-      }
-
-     
+    
     });
   });
    
   }
+  
 
   edit_profile()
   {

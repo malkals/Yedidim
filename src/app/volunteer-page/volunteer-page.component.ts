@@ -43,6 +43,11 @@ else
 var audio = new Audio('assets/2.mp3');
 audio.play();
 }*/
+logOut()
+{
+  this.firebaseService.logout();
+  this.router.navigate(["first-page"]);
+}
 ok()
 {
 

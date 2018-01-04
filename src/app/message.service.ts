@@ -16,25 +16,35 @@ export class MessageService {
    private itemdoc:AngularFirestoreDocument<any>;
    private flag:number;
    private col:AngularFirestoreCollection<any>;
+   private firstTime=true;
   
 
   constructor(private afsDocument: AngularFirestore,public afAuth: AngularFireAuth, public firebaseService: FirebaseService) { 
     this.itemdoc=this.afsDocument.doc("volunteers/" +this.firebaseService.getEmail()); 
-    //this.getPicture();
+   
 
     this.itemdoc.valueChanges().subscribe(res=>{
       
       this.city=res.city;
       this.categories=res.helpCategory;
   
-    
+    });
    
   
   console.log(this.city);
    this.col=this.afsDocument.collection("messages"); 
     this.col.valueChanges().subscribe(mess=>{
-//this.play();
       this.messages=mess;
+      if(!this.firstTime)
+      {
+        let audio=new Audio('assets/2.mp3');
+        audio.play();
+      }
+      else
+      {
+        this.firstTime=false;
+      }
+     
       
       
       if(this.messages!=null)
@@ -63,17 +73,18 @@ export class MessageService {
          
        });
       }
+      
     
     });
-  });
+ 
    
   }
  
 
   add(message: any) :void{
-    this.messageRef.add(message).then(res=>{
+    this.col.add(message).then(res=>{
 
-    })
+    });
   }
   
   

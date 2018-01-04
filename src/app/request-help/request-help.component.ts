@@ -109,7 +109,7 @@ export class RequestHelpComponent implements OnInit {
   
 
 
- })
+ });
 }
 
 

@@ -49,6 +49,7 @@ export class MessageService {
       
       if(this.messages!=null)
       {
+        this.messageArray=[];
       this.messages.forEach(element => {
         this.flag=0;
          

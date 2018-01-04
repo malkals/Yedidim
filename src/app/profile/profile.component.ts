@@ -94,7 +94,43 @@ public lastname:string;
    
    btnSubmit()
    {
-   this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.city,this.categories);
+   
+    if(this.firstname==""||this.lastname==""||this.phone==null||this.city==null||this.category=="")
+     {
+      document.getElementById("firstname").style.display="none";
+      document.getElementById("lastname").style.display="none";
+      document.getElementById("phone").style.display="none";
+      document.getElementById("city").style.display="none";
+      document.getElementById("category").style.display="none";
+      if(this.firstname=="")
+      {
+       document.getElementById("firstname").style.display="block";
+      }
+      if(this.lastname=="")
+      {
+       document.getElementById("lastname").style.display="block";
+      }
+      if(this.phone==null)
+      {
+       document.getElementById("phone").style.display="block";
+      }
+      if(this.city==null)
+      {
+       document.getElementById("city").style.display="block";
+      }
+      if(this.category=="")
+      {
+       document.getElementById("category").style.display="block";
+      }
+
+     }
+     
+   else
+   {
+
+     this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.city,this.categories);
+   }
+   
     
    }
   

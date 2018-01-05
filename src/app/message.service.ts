@@ -11,6 +11,7 @@ export class MessageService {
   private myMessage:any[];
   private messages: any[];
   private messageArray:any[]=new Array();
+  public temp:number;
    private city;
    private categories:string[]=new Array();
    private itemdoc:AngularFirestoreDocument<any>;
@@ -35,21 +36,14 @@ export class MessageService {
    this.col=this.afsDocument.collection("messages"); 
     this.col.valueChanges().subscribe(mess=>{
       this.messages=mess;
-      if(!this.firstTime)
-      {
-        let audio=new Audio('assets/2.mp3');
-        audio.play();
-      }
-      else
-      {
-        this.firstTime=false;
-      }
+      
      
       
       
       if(this.messages!=null)
       {
-        this.messageArray=[];
+        this.temp=this.messages.length;
+       this.messageArray=[];
       this.messages.forEach(element => {
         this.flag=0;
          
@@ -68,9 +62,28 @@ export class MessageService {
         {  
           
          this.messageArray.push(element);
-  
+         
        }
+
+
+       var date_sort_desc = 
+      
+     
+      this.messageArray.sort(function(a, b) {
+        a = new Date(a.date);
+        b = new Date(b.date);
+        return a>b ? -1 : a<b ? 1 : 0;
+    });
         
+           
+    //  this.messageArray.sort(function(a, b){
+        
+      //  return a.date-b.date ;//sort by date ascending
+   // });
+          //let audio=new Audio('assets/2.mp3');
+         // audio.play();
+       
+
          
        });
       }

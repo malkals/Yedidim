@@ -12,7 +12,7 @@ export class OkComponent implements OnInit {
   constructor( public router:Router ) { }
   back():void
   {
-    this.router.navigate(["volnunteer-page"]);
+    this.router.navigate(["volunteer-page"]);
   }
  
   ngOnInit() {

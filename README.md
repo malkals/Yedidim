@@ -31,4 +31,4 @@ Please visit our wiki for furthur project info:
  *  [Iteration 1 - MVP](https://github.com/malkals/Yedidim/wiki/Iteration-1-MVP)<br>
 *  [Iteration 2 - Feature X](https://github.com/malkals/Yedidim/wiki/Iteration-2---Feature-X)<br>
  * [Iteration 3 - Feature Y](https://github.com/malkals/Yedidim/wiki/Iteration-3---Feature-Y)<br>
-* [Iteration 4 - Feature Z]()
+* [Iteration 4 - Feature Z](https://github.com/malkals/Yedidim/wiki/Iteration-4---Feature-Z)

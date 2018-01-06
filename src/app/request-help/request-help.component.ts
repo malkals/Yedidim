@@ -19,7 +19,7 @@ export class RequestHelpComponent implements OnInit {
   public firstname:string;
   public lastname:string;
    public phone:number;
-   public adrress:string;
+   public address:string;
    public detailsEvent:string;
    public category:string;
  public message:string;
@@ -35,7 +35,7 @@ export class RequestHelpComponent implements OnInit {
    this.firstname="";
    this.lastname="";
    this.phone=null;
-   this.adrress="";
+   this.address="";
    this.detailsEvent="";
    this.category="";
    this.message="";
@@ -96,20 +96,70 @@ export class RequestHelpComponent implements OnInit {
 
   req_submit()
 {
- this.messageService.add({
+  if(this.firstname==""||this.lastname==""||this.phone==null||this.phone==""||this.address==""||this.city==null||this.category==""||this.detailsEvent=="")
+  {
+   document.getElementById("firstname").style.display="none";
+   document.getElementById("lastname").style.display="none";
+   document.getElementById("phone").style.display="none";
+   document.getElementById("city").style.display="none";
+   document.getElementById("category").style.display="none";
+   document.getElementById("address").style.display="none";
+   document.getElementById("details").style.display="none";
+   if(this.firstname=="")
+   {
+    document.getElementById("firstname").style.display="block";
+   }
+   if(this.lastname=="")
+   {
+    document.getElementById("lastname").style.display="block";
+   }
+   if(this.phone==null)
+   {
+    document.getElementById("phone").style.display="block";
+   }
+   if(this.phone=="")
+   {
+    document.getElementById("phone").style.display="block";
+   }
+   if(this.city==null)
+   {
+    document.getElementById("city").style.display="block";
+   }
+   if(this.category=="")
+   {
+    document.getElementById("category").style.display="block";
+   }
+   if(this.address=="")
+   {
+    document.getElementById("address").style.display="block";
+   }
+   if(this.detailsEvent=="")
+   {
+    document.getElementById("details").style.display="block";
+   }
 
-  name :this.firstname,
-  lastname:this.lastname,
-  phone: this.phone,
-  category:this.category,
-  address:this.adrress,
-  details:this.detailsEvent,
-  date: this.format(this.date),
-  city:this.city
+  }
   
+else
+{
+
+  this.messageService.add({
+
+    name :this.firstname,
+    lastname:this.lastname,
+    phone: this.phone,
+    category:this.category,
+    address:this.address,
+    details:this.detailsEvent,
+    date: this.format(this.date),
+    city:this.city
+    
+  
+  
+   });
+}
 
 
- });
 }
 
 

@@ -15,16 +15,33 @@
       
         <label for="fname">פרטים אישיים</label>
         <input type="text"  [(ngModel)]="firstname"  placeholder="שם פרטי">
+        <div id="firstname" style="color:red; display:none">
+          The first name is required.
+        </div>
         <input type="text"  [(ngModel)]="lastname" placeholder="שם משפחה">
+        <div id="lastname" style="color:red; display:none">
+          The last name is required.
+        </div>
         <input type="tel" [(ngModel)]="phone" placeholder="מס' פלאפון">
+        <div id="phone" style="color:red; display:none">
+          The phone number is required.
+        </div>
         <label for="city">העיר בה אתה נמצא כרגע </label>
         <select id="city1" (change)='city = $event.target.value'  >
           <option *ngFor="let p of types" [value]="p.value" >{{p.valueToShow}}</option>  
           </select>
-
-        <input type="text" [(ngModel)]="adrress" placeholder="הכנס כתובת מדויקת">
+          <div id="city" style="color:red; display:none">
+            The city is required.
+          </div>
+        <input type="text" [(ngModel)]="address" placeholder="הכנס כתובת מדויקת">
+        <div id="address" style="color:red; display:none">
+          The address is required.
+        </div>
         <label for="fname"> פרטי הארוע</label>
         <input type="text" [(ngModel)]="detailsEvent" placeholder="פרט/י את הארוע">
+        <div id="details" style="color:red; display:none">
+          The event details are required.
+        </div>
         <label >סיווג מקצועי </label>
         <br><br><label > .לצורך שיפור מענה הקריאות, אנא בחר את תחום הסיוע שבו אתה נזקק לעזרה </label>
         <br><label > . בחירת האפשרות "אחר" תפרסם את קריאתך לכל המתנדבים-ללא סיווג מקצועי </label>
@@ -113,7 +130,9 @@
                     
 
 
-
+                    <div id="category" style="color:red; display:none">
+                      The category is required.
+                    </div>
 
 
 

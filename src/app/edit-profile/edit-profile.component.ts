@@ -99,8 +99,33 @@ export class EditProfileComponent implements OnInit {
 
   btnSubmit()
   {
-  this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.city,this.categories);
-   
+    if(this.firstname==""||this.lastname==""||this.phone=="")
+     {
+      document.getElementById("firstname").style.display="none";
+      document.getElementById("lastname").style.display="none";
+      document.getElementById("phone").style.display="none";
+
+      if(this.firstname=="")
+      {
+       document.getElementById("firstname").style.display="block";
+      }
+      if(this.lastname=="")
+      {
+       document.getElementById("lastname").style.display="block";
+      }
+      if(this.phone=="")
+      {
+       document.getElementById("phone").style.display="block";
+      }
+
+
+     }
+     
+   else
+   {
+
+     this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.city,this.categories);
+   }
   }
 
   ngOnInit() {

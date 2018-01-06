@@ -10,14 +10,26 @@
   </div> 
  
   <label for="fname">פרטים אישיים</label>
-  <input type="text" [(ngModel)]="firstname" placeholder="שם פרטי" required>
-  <input type="text" [(ngModel)]="lastname"  placeholder="שם משפחה" required>
-  <input type="tel" [(ngModel)]="phone"  placeholder="מס' פלאפון" required>
+  <input type="text" [(ngModel)]="firstname" placeholder="שם פרטי" name="firstname" >
+  <div id="firstname" style="color:red; display:none">
+    The first name is required.
+  </div>
+  <input type="text" [(ngModel)]="lastname"  placeholder="שם משפחה" name="lastname" >
+  <div id="lastname" style="color:red; display:none">
+    The last name is required.
+  </div>
+  <input type="tel" [(ngModel)]="phone"  placeholder="מס' פלאפון" name="phone" >
+  <div id="phone" style="color:red; display:none">
+    The phone number is required.
+  </div>
   <label for="city">עיר מגורים</label>
 
   <select id="city" (change)='city = $event.target.value'  >
   <option *ngFor="let p of types" [value]="p.value" >{{p.valueToShow}}</option>  
   </select>
+  <div id="city" style="color:red; display:none">
+    The city is required.
+  </div>
   <label >סיווג מקצועי </label>
   <br><br>
   <label > .לצורך שיפור מענה הקריאות, אנא בחר את תחומי הסיוע מהם הנך מעוניין לקבל קריאות </label>
@@ -101,7 +113,9 @@
         </div>
         
       <div class="clearfix"></div>
- 
+      <div id="category" style="color:red; display:none">
+        The category is required.
+      </div>
 
       <br> 
        <button (click)="btnSubmit()" class="btnSubmit">שמור </button>

@@ -10,18 +10,17 @@
       <h1 class=title>הצטרפות לארגון</h1>
   </div> 
   
- <form name="myForm">
-    <br>
+
   <label for="fname">פרטים אישיים</label>
-  <input type="text" [(ngModel)]="firstname" placeholder="שם פרטי" name="firstname" required>
+  <input type="text" [(ngModel)]="firstname" placeholder="שם פרטי" name="firstname" >
   <div id="firstname" style="color:red; display:none">
     The first name is required.
   </div>
-  <input type="text" [(ngModel)]="lastname"  placeholder="שם משפחה" name="lastname" required>
+  <input type="text" [(ngModel)]="lastname"  placeholder="שם משפחה" name="lastname" >
   <div id="lastname" style="color:red; display:none">
     The last name is required.
   </div>
-  <input type="tel" [(ngModel)]="phone"  placeholder="מס' פלאפון" name="phone" required >
+  <input type="tel" [(ngModel)]="phone"  placeholder="מס' פלאפון" name="phone" >
   <div id="phone" style="color:red; display:none">
     The phone number is required.
   </div>
@@ -124,6 +123,6 @@
       <br> 
        <button (click)="btnSubmit()" class="btnSubmit">הצטרפות לארגון </button>
        
-      </form>
+     
       
     </div>

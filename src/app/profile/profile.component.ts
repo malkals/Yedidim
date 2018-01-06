@@ -95,7 +95,7 @@ public lastname:string;
    btnSubmit()
    {
    
-    if(this.firstname==""||this.lastname==""||this.phone==null||this.phone==""||this.city==null||this.category=="")
+    if(this.firstname==""||this.lastname==""||this.phone==null||this.phone==null||this.city==null||this.category=="")
      {
       document.getElementById("firstname").style.display="none";
       document.getElementById("lastname").style.display="none";
@@ -114,7 +114,7 @@ public lastname:string;
       {
        document.getElementById("phone").style.display="block";
       }
-      if(this.phone=="")
+      if(this.phone==null)
       {
        document.getElementById("phone").style.display="block";
       }

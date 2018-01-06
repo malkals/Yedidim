@@ -96,7 +96,7 @@ export class RequestHelpComponent implements OnInit {
 
   req_submit()
 {
-  if(this.firstname==""||this.lastname==""||this.phone==null||this.phone==""||this.address==""||this.city==null||this.category==""||this.detailsEvent=="")
+  if(this.firstname==""||this.lastname==""||this.phone==null||this.phone==null||this.address==""||this.city==null||this.category==""||this.detailsEvent=="")
   {
    document.getElementById("firstname").style.display="none";
    document.getElementById("lastname").style.display="none";
@@ -117,7 +117,7 @@ export class RequestHelpComponent implements OnInit {
    {
     document.getElementById("phone").style.display="block";
    }
-   if(this.phone=="")
+   if(this.phone==null)
    {
     document.getElementById("phone").style.display="block";
    }

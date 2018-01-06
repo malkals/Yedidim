@@ -99,7 +99,7 @@ export class EditProfileComponent implements OnInit {
 
   btnSubmit()
   {
-    if(this.firstname==""||this.lastname==""||this.phone=="")
+    if(this.firstname==""||this.lastname==""||this.phone==null)
      {
       document.getElementById("firstname").style.display="none";
       document.getElementById("lastname").style.display="none";
@@ -113,7 +113,7 @@ export class EditProfileComponent implements OnInit {
       {
        document.getElementById("lastname").style.display="block";
       }
-      if(this.phone=="")
+      if(this.phone==null)
       {
        document.getElementById("phone").style.display="block";
       }

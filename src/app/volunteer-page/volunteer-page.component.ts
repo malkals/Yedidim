@@ -49,7 +49,8 @@ else
 
 }
 
-confirm(_puid:string)
+
+confirm(_name:string, _lastname:string, _phone:number,_category:string,_city:string,_address:string,_details:string,_puid:string)
 {
   
   
@@ -63,6 +64,7 @@ confirm(_puid:string)
       id:_puid,
       
      })
+     this.messageService.current_mess(_name,_lastname,_phone,_category,_city,_address,_details);
 
      this.router.navigate(["ok"]);
     }

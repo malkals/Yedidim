@@ -21,6 +21,14 @@ export class MessageService {
    private returnMessageRef: AngularFirestoreCollection<any>;
    private _id:string;
    public id: string;
+   public detail_name:string;
+   public detail_lastname:string;
+   public detail_phone:number;
+   public detail_cat:string;
+   public detail_address:string;
+   public detail_details:string;
+   public detail_city:string;
+
   
 
   constructor(private afsDocument: AngularFirestore,public afAuth: AngularFireAuth, public firebaseService: FirebaseService) { 
@@ -128,6 +136,53 @@ export class MessageService {
   {
     return this.myMessage ? this.myMessage :[]
   }
+
+  public current_mess(_name:string, _lastname:string, _phone:number,_category:string,_city:string,_address:string,_details:string)
+  {
+
+    this.detail_name=_name;
+    this.detail_lastname=_lastname;
+    this.detail_phone=_phone;
+    this.detail_cat=_category;
+    this.detail_city=_city;
+    this.detail_address=_address;
+    this.detail_details=_details;
+
+  }
+  public get_curr_name()
+  {
+    return this.detail_name;
+  }
+  public get_curr_last()
+  {
+    return this.detail_lastname;
+   
+  }
+
+  public get_curr_phone()
+  {
+    return this.detail_phone;
+
+  }
+  public get_curr_cat()
+  {
+
+ return this.detail_cat;
+  }
+  public get_curr_address()
+  {
+    return this.detail_address;
+  }
+  public get_curr_city()
+  {
+    return this.detail_city;
+
+  }
+public get_curr_details()
+{
+  return  this.detail_details;
+
+}
 
  
 

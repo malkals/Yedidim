@@ -21,6 +21,8 @@ import { VolunteerPageComponent } from './volunteer-page/volunteer-page.componen
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MainComponent } from './main/main.component';
 import { OkComponent } from './ok/ok.component';
+import { ConfirmationPageComponent } from './confirmation-page/confirmation-page.component';
+import {ReturnMessageService}  from './return-message.service'
 
 
 export const environment = {
@@ -45,6 +47,7 @@ export const environment = {
     EditProfileComponent,
     MainComponent,
     OkComponent,
+    ConfirmationPageComponent,
    
    
   ],
@@ -66,7 +69,8 @@ export const environment = {
   ],
   providers: [
     FirebaseService,
-    MessageService
+    MessageService,
+    ReturnMessageService
   ],
   bootstrap: [AppComponent]
 })

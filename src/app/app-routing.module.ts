@@ -7,6 +7,7 @@ import { VolunteerPageComponent } from './volunteer-page/volunteer-page.componen
 import {EditProfileComponent} from './edit-profile/edit-profile.component';
 import {MainComponent} from './main/main.component';
 import {OkComponent} from './ok/ok.component';
+import {ConfirmationPageComponent} from './confirmation-page/confirmation-page.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "main", pathMatch: "full" },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'profile' , component: ProfileComponent},
   { path: 'request' , component: RequestHelpComponent},
   { path: 'edit-profile' , component: EditProfileComponent},
+  {path:'confirmation-page',component:ConfirmationPageComponent}
   
 
 ];

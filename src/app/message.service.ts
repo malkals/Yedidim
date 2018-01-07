@@ -18,9 +18,14 @@ export class MessageService {
    private flag:number;
    private col:AngularFirestoreCollection<any>;
    private firstTime=true;
+   private returnMessageRef: AngularFirestoreCollection<any>;
+   private _id:string;
+   public id: string;
   
 
   constructor(private afsDocument: AngularFirestore,public afAuth: AngularFireAuth, public firebaseService: FirebaseService) { 
+    this.returnMessageRef = this.afsDocument.collection("return_messages");
+    this._id="";
     this.itemdoc=this.afsDocument.doc("volunteers/" +this.firebaseService.getEmail()); 
    
 
@@ -51,6 +56,7 @@ export class MessageService {
           if(Celement==element.category||Celement=="אחר")
           { 
              this.flag=1;
+             
             
            }
            
@@ -100,11 +106,29 @@ export class MessageService {
 
     });
   }
+
+  addReturnMessages(return_message: any): void {
+    this.returnMessageRef.add(return_message).then(res => {
+
+
+
+    })
+
+  }
+
+  public get_id_message() {
+    this.id = this.afsDocument.createId();
+    return this.id;
+  }
+
+
   
   
   public get allMessage()
   {
     return this.myMessage ? this.myMessage :[]
   }
+
+ 
 
 }

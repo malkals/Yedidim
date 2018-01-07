@@ -6,6 +6,7 @@ import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection 
 import { Observable } from 'rxjs/Observable';
 import { MessageService } from '../message.service';
 import { Data } from '@angular/router/src/config';
+import { ReturnMessageService} from '../return-message.service';
 
 @Component({
   selector: 'app-request-help',
@@ -26,19 +27,23 @@ export class RequestHelpComponent implements OnInit {
  public city :string;
  public date:Date=new Date();
  types: any[];
+ public id:string;
+
+
 
  
 
 
  
-  constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService,private messageService: MessageService) {
+  constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService,private messageService: MessageService, public retMessageService:ReturnMessageService) {
    this.firstname="";
-   this.lastname="";
+  this.lastname="";
    this.phone=null;
-   this.address="";
+  this.address="";
    this.detailsEvent="";
    this.category="";
-   this.message="";
+  this.message="";
+   this.id=this.messageService.get_id_message(),
 
    this.types = [  {value: 0 , valueToShow: "" },
    {value: "אופקים" , valueToShow: "אופקים" },
@@ -64,6 +69,8 @@ export class RequestHelpComponent implements OnInit {
  {value: "יבנה" , valueToShow: "יבנה" },
  {value: "ירושלים" , valueToShow: "ירושלים" },
  {value: "אלעד" , valueToShow: "אלעד" }];
+
+
   
   
 
@@ -152,15 +159,20 @@ else
     address:this.address,
     details:this.detailsEvent,
     date: this.format(this.date),
-    city:this.city
+    city:this.city,
+    id:this.id,
     
   
   
    });
+   this.retMessageService.currentMessage(this.firstname,this.lastname,this.id);
+
+   this.router.navigate(["confirmation-page"]);
 }
 
 
 }
+
 
 
   ngOnInit() {

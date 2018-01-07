@@ -7,6 +7,8 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { RequestHelpComponent } from './request-help/request-help.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AuthService } from "./auth.service";
+import { GuardGuard } from "./guard.guard";
 
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
@@ -65,6 +67,8 @@ export const environment = {
    
   ],
   providers: [
+    GuardGuard,
+    AuthService,
     FirebaseService,
     MessageService
   ],

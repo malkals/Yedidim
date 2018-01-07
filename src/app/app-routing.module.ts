@@ -7,13 +7,15 @@ import { VolunteerPageComponent } from './volunteer-page/volunteer-page.componen
 import {EditProfileComponent} from './edit-profile/edit-profile.component';
 import {MainComponent} from './main/main.component';
 import {OkComponent} from './ok/ok.component';
+import {GuardGuard}from './guard.guard'
+
 
 const routes: Routes = [
   { path: "", redirectTo: "main", pathMatch: "full" },
-  { path: 'main',component: MainComponent },
-  { path:'first-page', component: FirstPageComponent },
-  { path:'volunteer-page', component: VolunteerPageComponent },
-  { path:'ok', component: OkComponent },
+  { path: 'main',component: MainComponent , canActivate: [ GuardGuard ]},
+  { path:'first-page', component: FirstPageComponent},
+  { path:'volunteer-page', component: VolunteerPageComponent},
+  { path:'ok', component: OkComponent},
   { path: 'profile' , component: ProfileComponent},
   { path: 'request' , component: RequestHelpComponent},
   { path: 'edit-profile' , component: EditProfileComponent},

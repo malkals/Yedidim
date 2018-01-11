@@ -57,13 +57,24 @@ div.logo img {
 margin-right: 37%;
 
 }
-
-#waiting{
-
-    display:block;
+.text1{
+   color:red; 
+   text-align: center;
+   font-size: 20PX;
+ 
 }
 
 #return{
     display: none;
+    
 }
 
+.buttonload {
+    background-color: rgb(131, 88, 172); /* Green background */
+    border-radius: 50px; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 23px ;/* Set a font size */
+    width: 50px;
+    margin-right: 120px;
+}

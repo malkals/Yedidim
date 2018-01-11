@@ -47,7 +47,25 @@
 .text
 {
     font-size: 20PX;
+    text-align: center;
+   color: red;
 }
+.ms{
+    border: 1.5px solid rgb(69, 19, 99);
+    border-radius: 4px;
+    margin-top:6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    padding: 12px 20px;
 
-
+}
+.d{
+   
+    background-color:red;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px; 
+    margin-right: 29%;
+    height: 38px;
+}
 

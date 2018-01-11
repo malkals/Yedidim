@@ -97,6 +97,8 @@ export class EditProfileComponent implements OnInit {
 
    }
 
+
+
   btnSubmit()
   {
     if(this.firstname==""||this.lastname==""||this.phone==null)
@@ -127,6 +129,33 @@ export class EditProfileComponent implements OnInit {
      this.firebaseService.btn1Submit(this.firstname,this.lastname,this.phone,this.city,this.categories);
    }
   }
+
+
+  a(){
+    document.getElementById("a").style.backgroundColor="rgb(131, 88, 172)";
+  }
+  b(){
+   document.getElementById("b").style.backgroundColor="rgb(131, 88, 172)";
+ }
+ c(){
+   document.getElementById("c").style.backgroundColor="rgb(131, 88, 172)";
+ }
+ d(){
+   document.getElementById("d").style.backgroundColor="rgb(131, 88, 172)";
+ }
+ e(){
+   document.getElementById("e").style.backgroundColor="rgb(131, 88, 172)";
+ }
+f(){
+   document.getElementById("f").style.backgroundColor="rgb(131, 88, 172)";
+ }
+ g(){
+   document.getElementById("g").style.backgroundColor="rgb(131, 88, 172)";
+ }
+ h(){
+   document.getElementById("h").style.backgroundColor="rgb(131, 88, 172)";
+ }
+
 
   ngOnInit() {
   }

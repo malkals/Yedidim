@@ -83,11 +83,11 @@ div.gallery img {
     height: 12%;
     margin-left: -15%;
 }
-div.gallery a  :hover{
+/*div.gallery a  :hover{
 border-radius: 10px;
 background: rgb(131, 88, 172);
 
-}
+}*/
 
 
 div.desc {

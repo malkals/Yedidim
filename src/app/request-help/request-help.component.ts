@@ -28,7 +28,14 @@ export class RequestHelpComponent implements OnInit {
  public date:Date=new Date();
  types: any[];
  public id:string;
-
+public count1:number=0;
+public count2:number=0;
+public count3:number=0;
+public count4:number=0;
+public count5:number=0;
+public count6:number=0;
+public count7:number=0;
+public count8:number=0;
 
 
  
@@ -85,27 +92,61 @@ export class RequestHelpComponent implements OnInit {
    }
 
    a(){
+     this.count1++;
+     if(this.count1%2==0)
+     document.getElementById("a").style.backgroundColor="#f2f2f2";
+    
+     else
      document.getElementById("a").style.backgroundColor="rgb(131, 88, 172)";
+     
    }
    b(){
+    this.count2++;
+    if(this.count2%2==0)
+    document.getElementById("b").style.backgroundColor="#f2f2f2";
+    else
     document.getElementById("b").style.backgroundColor="rgb(131, 88, 172)";
   }
   c(){
+    this.count3++;
+    if(this.count3%2==0)
+    document.getElementById("c").style.backgroundColor="#f2f2f2";
+    else
     document.getElementById("c").style.backgroundColor="rgb(131, 88, 172)";
   }
   d(){
+    this.count4++;
+    if(this.count4%2==0)
+    document.getElementById("d").style.backgroundColor="#f2f2f2";
+    else
     document.getElementById("d").style.backgroundColor="rgb(131, 88, 172)";
   }
   e(){
+    this.count5++;
+    if(this.count5%2==0)
+    document.getElementById("e").style.backgroundColor="#f2f2f2";
+    else
     document.getElementById("e").style.backgroundColor="rgb(131, 88, 172)";
   }
  f(){
+  this.count6++;
+  if(this.count6%2==0)
+  document.getElementById("f").style.backgroundColor="#f2f2f2";
+  else
     document.getElementById("f").style.backgroundColor="rgb(131, 88, 172)";
   }
   g(){
+    this.count7++;
+    if(this.count7%2==0)
+    document.getElementById("g").style.backgroundColor="#f2f2f2";
+    else
     document.getElementById("g").style.backgroundColor="rgb(131, 88, 172)";
   }
   h(){
+    this.count8++;
+    if(this.count8%2==0)
+    document.getElementById("h").style.backgroundColor="#f2f2f2";
+    else
     document.getElementById("h").style.backgroundColor="rgb(131, 88, 172)";
   }
 

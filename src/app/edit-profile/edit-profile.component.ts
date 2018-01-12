@@ -25,7 +25,14 @@ export class EditProfileComponent implements OnInit {
     lat: number;
     lng: number;
     private itemdoc:AngularFirestoreDocument<any>;
-
+    public count1:number=0;
+    public count2:number=0;
+    public count3:number=0;
+    public count4:number=0;
+    public count5:number=0;
+    public count6:number=0;
+    public count7:number=0;
+    public count8:number=0;
 
   constructor( public router:Router , private afs: AngularFirestore, public firebaseService: FirebaseService) {
     this.types = [  {value: 0 , valueToShow: "" },
@@ -132,28 +139,61 @@ export class EditProfileComponent implements OnInit {
 
 
   a(){
+    this.count1++;
+    if(this.count1%2==0)
+    document.getElementById("a").style.backgroundColor="#f2f2f2";
+   
+    else
     document.getElementById("a").style.backgroundColor="rgb(131, 88, 172)";
   }
   b(){
-   document.getElementById("b").style.backgroundColor="rgb(131, 88, 172)";
+    this.count2++;
+    if(this.count2%2==0)
+    document.getElementById("b").style.backgroundColor="#f2f2f2";
+    else
+    document.getElementById("b").style.backgroundColor="rgb(131, 88, 172)";
  }
  c(){
-   document.getElementById("c").style.backgroundColor="rgb(131, 88, 172)";
+  this.count3++;
+  if(this.count3%2==0)
+  document.getElementById("c").style.backgroundColor="#f2f2f2";
+  else
+  document.getElementById("c").style.backgroundColor="rgb(131, 88, 172)";
  }
  d(){
-   document.getElementById("d").style.backgroundColor="rgb(131, 88, 172)";
+  this.count4++;
+  if(this.count4%2==0)
+  document.getElementById("d").style.backgroundColor="#f2f2f2";
+  else
+  document.getElementById("d").style.backgroundColor="rgb(131, 88, 172)";
  }
  e(){
-   document.getElementById("e").style.backgroundColor="rgb(131, 88, 172)";
+  this.count5++;
+  if(this.count5%2==0)
+  document.getElementById("e").style.backgroundColor="#f2f2f2";
+  else
+  document.getElementById("e").style.backgroundColor="rgb(131, 88, 172)";
  }
 f(){
-   document.getElementById("f").style.backgroundColor="rgb(131, 88, 172)";
+  this.count6++;
+  if(this.count6%2==0)
+  document.getElementById("f").style.backgroundColor="#f2f2f2";
+  else
+    document.getElementById("f").style.backgroundColor="rgb(131, 88, 172)";
  }
  g(){
-   document.getElementById("g").style.backgroundColor="rgb(131, 88, 172)";
+  this.count7++;
+  if(this.count7%2==0)
+  document.getElementById("g").style.backgroundColor="#f2f2f2";
+  else
+  document.getElementById("g").style.backgroundColor="rgb(131, 88, 172)";
  }
  h(){
-   document.getElementById("h").style.backgroundColor="rgb(131, 88, 172)";
+  this.count8++;
+  if(this.count8%2==0)
+  document.getElementById("h").style.backgroundColor="#f2f2f2";
+  else
+  document.getElementById("h").style.backgroundColor="rgb(131, 88, 172)";
  }
 
 

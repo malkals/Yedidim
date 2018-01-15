@@ -78,17 +78,9 @@ export class MessageService {
          this.messageArray.push(element);
          
        }
+      this. messageArray.sort( (a,b) => b.date.localeCompare(a.date) );
 
-
-       var date_sort_desc = 
       
-     
-      this.messageArray.sort(function(a, b) {
-        a = new Date(a.date);
-        b = new Date(b.date);
-        return a>b ? -1 : a<b ? 1 : 0;
-    });
-        
            
     //  this.messageArray.sort(function(a, b){
         

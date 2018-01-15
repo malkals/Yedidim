@@ -28,7 +28,8 @@ export class MessageService {
    public detail_address:string;
    public detail_details:string;
    public detail_city:string;
-
+   public date:Date;
+   public date1:any;
   
 
   constructor(private afsDocument: AngularFirestore,public afAuth: AngularFireAuth, public firebaseService: FirebaseService) { 
@@ -36,7 +37,7 @@ export class MessageService {
     this._id="";
     this.itemdoc=this.afsDocument.doc("volunteers/" +this.firebaseService.getEmail()); 
    
-
+    this.date1 =this.format(this.date=new Date());
     this.itemdoc.valueChanges().subscribe(res=>{
       
       this.city=res.city;
@@ -50,7 +51,7 @@ export class MessageService {
     this.col.valueChanges().subscribe(mess=>{
       this.messages=mess;
       
-     
+    
       
       
       if(this.messages!=null)
@@ -76,7 +77,11 @@ export class MessageService {
         {  
           
          this.messageArray.push(element);
-         
+         if(element.date>=this.date1)
+         {
+           let audio=new Audio('assets/2.mp3');
+           audio.play();
+         }
        }
       this. messageArray.sort( (a,b) => b.date.localeCompare(a.date) );
 
@@ -122,7 +127,20 @@ export class MessageService {
   }
 
 
-  
+  format(curr){
+    var dd = curr.getDate();
+  var mm = curr.getMonth()+1; //January is 0!
+  var yyyy =curr.getFullYear();
+  var time=curr.getHours();
+  if(dd<10){
+      dd='0'+dd;
+  } 
+  if(mm<10){
+      mm='0'+mm;
+  } 
+  var today = dd+'/'+mm+'/'+yyyy+"  "+curr.getHours()+":"+curr.getMinutes()+":"+curr.getSeconds();
+  return today;
+  }
   
   public get allMessage()
   {

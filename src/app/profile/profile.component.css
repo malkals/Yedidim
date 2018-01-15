@@ -88,9 +88,9 @@ input[type=tel], select, textarea {
 }
 
 div.gallery img {
-    width: 12%;
-    height: 12%;
-    margin-left: -15%;
+    width: 29%;
+    height: 29%;
+    margin-right: 35%;
 }
 div.gallery a  :hover{
 border-radius: 10px;
@@ -101,7 +101,7 @@ background: rgb(131, 88, 172);
 
 div.desc {
     padding: 15px;
-    text-align:end;
+    text-align:center;
  
 }
 

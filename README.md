@@ -5,7 +5,7 @@ The application offers streamlining of the organization's volunteers. Synchroniz
 ![project logo](https://raw.githubusercontent.com/malkals/our-project/master/pictures/%D7%9C%D7%95%D7%92%D7%95%20%D7%99%D7%93%D7%99%D7%93%D7%99%D7%9D.png)
 
 ## Please visit our [live application](https://yedidim-project.firebaseapp.com/)
-Alright, currently only a landing page...
+
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yedidim_group/Lobby)
 [![GitHub issues](https://img.shields.io/github/issues/jce-il/our-project.svg?style=flat)](https://github.com/malkals/our-project/issues) </br>
@@ -16,7 +16,7 @@ This project is developed as part of the requirements for a [software engineerin
 
 Please visit our wiki for furthur project info: 
 
-### [User Manual](https://github.com/malkals/our-project/wiki/User-Manual) (empty for now)
+### [User Manual](https://github.com/malkals/our-project/wiki/User-Manual) 
  
 ### [Team Page](https://github.com/malkals/our-project/wiki/Team-page)
 

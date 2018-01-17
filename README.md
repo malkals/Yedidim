@@ -2,7 +2,7 @@
 
 The application offers streamlining of the organization's volunteers. Synchronization between the various volunteers and prevention of inefficiency.
 
-![project logo](https://raw.githubusercontent.com/malkals/our-project/master/%D7%9C%D7%95%D7%92%D7%95%20%D7%99%D7%93%D7%99%D7%93%D7%99%D7%9D.png)
+![project logo](https://raw.githubusercontent.com/malkals/our-project/master/pictures/%D7%9C%D7%95%D7%92%D7%95%20%D7%99%D7%93%D7%99%D7%93%D7%99%D7%9D.png)
 
 ## Please visit our [live application](https://yedidim-project.firebaseapp.com/)
 Alright, currently only a landing page...

@@ -5,14 +5,15 @@ import { AuthService } from "./auth.service";
 import { Router } from "@angular/router";
 @Injectable()
 export class GuardGuard implements CanActivate {
-  constructor(private authService: AuthService, private router:Router){}
+  constructor(private authService: AuthService, private router: Router) { }
   canActivate(
-  
+
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-      console.log(this.authService.login_success);
+    if (!this.authService.login_success)
       return true;
+    return false;
   }
 
-  
+
 }

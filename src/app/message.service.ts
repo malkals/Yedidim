@@ -37,7 +37,7 @@ export class MessageService {
     this._id="";
     this.itemdoc=this.afsDocument.doc("volunteers/" +this.firebaseService.getEmail()); 
    
-    this.date1 =this.format(this.date=new Date());
+    //this.date1 =this.format(this.date=new Date());
     this.itemdoc.valueChanges().subscribe(res=>{
       
       this.city=res.city;
@@ -50,8 +50,12 @@ export class MessageService {
    this.col=this.afsDocument.collection("messages"); 
     this.col.valueChanges().subscribe(mess=>{
       this.messages=mess;
+      if(this.firstTime==true)
+      {
+        this.date1 =this.format(this.date=new Date());
+        this.firstTime=false;
+      }
       
-    
       
       
       if(this.messages!=null)
@@ -79,6 +83,7 @@ export class MessageService {
          this.messageArray.push(element);
          if(element.date>=this.date1)
          {
+           this.date1=element.date;
            let audio=new Audio('assets/2.mp3');
            audio.play();
          }

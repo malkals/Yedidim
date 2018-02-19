@@ -89,11 +89,6 @@ export class MessageService {
        }
       this. messageArray.sort( (a,b) => b.date.localeCompare(a.date) );
 
-      
-           
-    
-       
-
          
        });
       }

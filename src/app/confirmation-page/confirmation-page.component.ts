@@ -101,7 +101,10 @@ export class ConfirmationPageComponent implements OnInit {
     }
     return this.puid;
    }
-   
+ public back()
+ {
+  this.router.navigate(["first-page"]);
+ }
 
   ngOnInit() {
   }
